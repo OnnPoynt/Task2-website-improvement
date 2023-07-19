@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;500;600;700;800;900;1000&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+    padding-bottom: 1000px;
+}
+
+.header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 9999;
+    position: absolute;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    color: #27BCE6;
+}
+
+.menu button {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.contact-button {
+    background-color: #27BCE6 !important;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust the button spacing */
+.menu button:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Media query for responsiveness (optional) */
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu button {
+        font-size: 14px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .contact-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+/* //////////////////TOP/////////////////// */
+.Top {
+    position: relative;
+}
+
+.top_text {
+    position: absolute;
+    font-size: 64px;
+    font-weight: 600;
+    color: #27BCE6;
+    left: 10vw;
+    top: 25vh;
+    max-width: 40vw;
+
+}
+
+.top_image {
+    z-index: -999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+}
+/* ///////////////////////WHO WE ARE///////////////////////// */
+.who_we_are {
+    position: relative;
+}
+
+.wwa_heading_text {
+    font-size: 40px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+.wwa_body_text {
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wwa_body_text p {
+    display: flex;
+    flex-direction: column;
+    max-width: 40vw;
+    align-items: center;
+}
+
+.wwa_body_text p:nth-child(1) {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.wwa_body_text p:nth-child(3) {
+    font-size: 28px;
+    font-weight: 500;
+}
+/* ////////////////////////////UPDATES////////////////////////////// */
+.updates {
+    position: relative;
+}
+
+.updates_text {
+    font-size: 40px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+/* ??????????carousel??????????? */
+
+.carousel {
+    background: #EEE;
+    height: 40vh;
+    width: 66%;
+}
+
+.carousel-cell {
+    width: 40%;
+    height: 100%;
+    margin-right: 10px;
+    background: rgb(50, 183, 216);
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+}
+
