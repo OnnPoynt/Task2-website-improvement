@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARS</title>
-    <link rel="stylesheet" href="Styles\styles.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
+    <link rel="stylesheet" href="Styles\styles.css">
 </head>
 
 <body>
-    <header class="header">
+    <header id="header">
         <div class="header-container">
             <div class="logo">Your Logo</div>
             <div class="menu">
@@ -23,7 +23,7 @@
             </div>
         </div>
     </header>
-    <section class="Top">
+    <section id="Top">
         <div class="top_image">
             <!-- <img class="top_image1" src="" alt=""> -->
         </div>
@@ -37,7 +37,7 @@
             </p>
         </div>
     </section>
-    <section class="who_we_are">
+    <section id="who_we_are">
         <div class="wwa_heading_text">
             <p>
                 Who We Are
@@ -71,7 +71,7 @@
             </p>
         </div>
     </section>
-    <section class="updates">
+    <section id="updates">
         <div class="updates_text">
             <p>
                 Updates
@@ -87,26 +87,76 @@
         </div>
 
     </section>
+    <section id="ourstories">
+        <div class="ourstories_text">
+            <p>
+                Our Stories
+            </p>
+            <p>
+                Here's what our customers have to say about us
+            </p>
+            <button class="learn-more">Learn more</button>
+        </div>
 
+        <div class="fade_carousel" data-flickity='{ "wrapAround": true, "fade": true, "imagesLoaded": true }'>
+            <div class="fade-cell">
+                <div class="fade-image">
+                    <img src="https://www.ar-system.co.jp/img/geotech.png" alt="">
+                </div>
+            </div>
+            <div class="fade-cell">
+                <div class="fade-image">
+                    <img src="https://www.ar-system.co.jp/img/granblue.png" alt="">
+                </div>
+            </div>
+            <div class="fade-cell">
+                <div class="fade-image">
+                    <img src="https://www.ar-system.co.jp/img/geotech.png" alt="">
+                </div>
+            </div>
+            <div class="fade-cell">
+                <div class="fade-image">
+                    <img src="https://www.ar-system.co.jp/img/granblue.png" alt="">
+                </div>
+            </div>
+        </div>
 
+    </section>
 
+    <section id="our_customers">
+        <div class="our-customers-text">
+            <p>
+                Our happy customers:
+            </p>
+        </div>
+        <div class="scrolling-banner">
+            <div class="scrolling-image">
+                <img src="Assets\client_202323.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <a href="contact.html">
+            <div class="alltext-contact">
+                <div class="contact-btn">
+                    <h5>Contact</h5>
+                    <p class="btn-under">まずはご気軽に連絡ください。</p>
+                    <img src="Assets\ace_logo.png" alt="" class="yes">
 
-
-
-
-
-
-
-
-
-
-
-
-
+                </div>
+            </div>
+            <div class="background-txt">
+                TALK TO US
+            </div>    
+        </a>
+    </section>
 
 
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@2/flickity-fade.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
