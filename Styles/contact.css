@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;500;600;700;800;900;1000&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+#header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 9999;
+    position: sticky;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    color: #27BCE6;
+}
+
+.menu button {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.contact-button {
+    background-color: #27BCE6 !important;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust the button spacing */
+.menu button:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Media query for responsiveness (optional) */
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu button {
+        font-size: 14px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .contact-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+
+.uptxt {
+    position: relative;
+    margin: 0px 0px 0px 8.4%;
+}
+
+.contact {
+    font-weight: 300;
+    font-size: 6.944444444444445vw;
+    font-family: 'Anek Bangla', sans-serif;
+    margin: 11.363636363636363vh 0px 0px 0px;
+}
+
+.under-txt {
+    margin: 0px;
+    font-weight: 300;
+    font-size: 1.1111111111111112vw;
+    line-height: 170%;
+    letter-spacing: 0.05em;
+}
+
+.tel {
+    position: relative;
+    font-family: 'Anek Bangla', sans-serif;
+    font-size: 2.8402366863905324vh;
+    font-weight: 300;
+    font-stretch: normal;
+    letter-spacing: 0.05em;
+    margin-bottom: 11.363636363636363vh;
+}
+
+.tel span {
+    font-size: 0.9722222222222222vw;
+    font-weight: 200;
+    font-stretch: normal;
+    line-height: 100%;
+    color: rgb(53, 53, 53);
+    opacity: 0.5;
+}
+
+.formbox {
+    padding: 0px 8.4%;
+}
+
+.required {
+    color: red;
+    font-weight: 800;
+}
+
+label {
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+input[type=text],
+select,
+textarea {
+    font-size: 1.893491124260355vh;
+    background: transparent;
+    width: 100%;
+    padding: 1.4201183431952662vh;
+    border: 0.11363636363636363vh solid rgba(137, 137, 137, 0.3);
+    border-radius: 1px;
+    box-sizing: border-box;
+    /* margin: 15px 0px 55px 0px; */
+    margin: 1.5% 0 4.5% 0;
+    resize: none;
+    color: #FFF;
+}
+
+/* Style the submit button with a specific background color etc */
+
+input[type=submit] {
+    font-size: 1.893491124260355vh;
+    background-color: #000000;
+    color: white;
+    /* padding: 60px 20px; */
+    padding: 5% 1%;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin: 10% 0%;
+}
+
+input[type=submit]:hover {
+    background-color: #0e0e0e;
+}
+
+.checkbox{
+    width: 0.78125vw;
+    height: 0.78125vw;
+}
+
+/* /////////////FOOTER///////////// */
+
+#footer{
+    background-color: #2E31A6;
+
+}
+
+.footer-full{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10vw;
+    height: 20vh;
+    padding: 10vh 0;
+}
+
+.brand img{
+    width: 164px;
+}
+
+.footer-btns{
+    font-size: 26px;
+}
+
+.footerbtns{
+    color: #EEE;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.copyright{
+    color: #EEE;
+    background-color: #4e4e4e;
+    padding: 2vh 0;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+}
