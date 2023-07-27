@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
+    <link rel="stylesheet" href="Styles\contact.css">
+</head>
+
+<body>
+
+    <!-- nav menu -->
+
+    <header id="header">
+        <div class="button-container">
+            <button class="header-button"><a href="index.html">Home</a></button>
+            <button class="header-button"><a href="https://ace-ars.jp/  ">通販Aceについて</a></button>
+            <button class="header-button"><a href="htmls\about.html">会社概要</a></button>
+        </div>
+        <div class="logo-container">
+            <a href="index.html">
+            <img src="Assets\logo.png" alt="Logo">
+        </a>
+        </div>
+        <div class="button-container">
+            <button class="header-button">通販プロ</button>
+            <button class="header-button">IT導入補助金</button>
+            <button class="header-button"><a href="contact.html">Contact</a></button>
+        </div>
+    </header>
+
+    <div class="uptxt">
+        <p class="contact">Contact</p>
+        <p class="under-txt">お仕事のご相談、ご依頼に関することなど <br>
+            フォームまたは電話からお気軽にお問い合わせください。</p>
+        <p class="tel"><span>TEL</span> <br> 00-0000-0000 </p>
+    </div>
+
+    <div class="formbox">
+        <form id="myForm" data-netlify="true" action="thankyou.html" method="post">
+
+            <label for="name">*名前</label>
+            <input type="text" id="name" name="firstname" placeholder="姓名" required>
+
+            <label for="company-name"><span class="required">*</span>会社名</label>
+            <input type="text" id="company" name="company-name" placeholder="株式会社ARS">
+
+            <label for="email"><span class="required">*</span>メールアドレス</label>
+            <input type="text" id="email" name="email" placeholder="example@mail.com" required>
+
+            <label for="phone"><span class="required">*</span>電話番号</label>
+            <input type="text" id="phone" name="phone" placeholder="000-1111-222" required>
+
+            <label for="subject"><span class="required">*</span>お問い合わせ内容</label>
+            <textarea id="message" name="message" placeholder="ここにお問い合わせ内容を記入"></textarea>
+
+            <input class="submitbutton" type="submit" value="送信する" required>
+
+        </form>
+    </div>
+    <section id="footer">
+        <div class="footer-full">
+            <div class="footer-logo">
+                <a href="index.html" class="brand"><img src="Assets\ace_logo.png" alt=""></a>
+            </div>
+            <div class="footer-btns">
+                <a href="/.html" class="footerbtns">会社概要</a>
+                <a href="/.html" class="footerbtns">プライバシーポリシー</a>
+                <a href="/.html" class="footerbtns">情報セキュリティ方針</a>
+                <a href="/.html" class="footerbtns">通販Aceサポートサイト</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>
+                © A R Systems. All rights reserved.
+            </p>
+        </div>
+    </section>
+
+    <script src="/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
+
+</body>
+
+</html>

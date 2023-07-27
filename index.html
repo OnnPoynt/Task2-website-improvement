@@ -13,9 +13,9 @@
 <body>
     <header id="header">
         <div class="button-container">
-            <button class="header-button">Home</button>
-            <button class="header-button">通販Aceについて</button>
-            <button class="header-button">会社概要</button>
+            <button class="header-button"><a href="about.html">Home</a></button>
+            <button class="header-button"><a href="https://ace-ars.jp/  ">通販Aceについて</a></button>
+            <button class="header-button"><a href="htmls\about.html">会社概要</a></button>
         </div>
         <div class="logo-container">
             <img src="Assets\logo.png" alt="Logo">
@@ -23,7 +23,7 @@
         <div class="button-container">
             <button class="header-button">通販プロ</button>
             <button class="header-button">IT導入補助金</button>
-            <button class="header-button">Contact</button>
+            <button class="header-button"><a href="contact.html">Contact</a></button>
         </div>
     </header>
 
@@ -116,6 +116,8 @@
         </div>
     </section>
 
+
+
     <section id="updates">
         <div id="container">
             <input hidden type="radio" name="carousel-control" id="button_a" checked />
@@ -123,38 +125,53 @@
             <input hidden type="radio" name="carousel-control" id="button_c" />
             <input hidden type="radio" name="carousel-control" id="button_d" />
 
+            <div id="navigation">
+                <label for="button_a" class="label_a"> <span>a</span> </label>
+                <label for="button_b" class="label_b"> <span>b</span> </label>
+                <label for="button_c" class="label_c"> <span>c</span> </label>
+                <label for="button_d" class="label_d"> <span>d</span> </label>
+            </div> <!-- // #navigation -->
 
             <div id="carousel">
                 <div class="p-wrapper">
 
                     <section class="panel_a">
-                        <h1>Basic Vertical CSS Carousel Demo</h1>
-                        <h2>Panel a</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare faucibus diam id
-                            maximus. Fusce at efficitur nunc. Curabitur sed ullamcorper orci. Nam nulla enim, ultricies
-                            nec lectus a, commodo volutpat nisi. Pellentesque facilisis lacinia ante, eu pulvinar ante
-                            varius a. Fusce tincidunt efficitur tempor. Praesent pretium felis consectetur posuere
-                            sagittis. Sed luctus nisl non vestibulum semper. Vivamus mi velit, porttitor ac malesuada
-                            at, vulputate venenatis augue.</p>
-                        <p>Morbi faucibus, nisi ac vulputate mattis, turpis tortor maximus nibh, nec interdum lectus sem
-                            sit amet enim. Integer non nulla vitae ex gravida egestas. Fusce sodales neque ut erat
-                            tempor euismod. Quisque imperdiet rhoncus pellentesque. Fusce vitae efficitur dolor, nec
-                            laoreet lacus. Nulla orci purus, cursus sit amet posuere ac, ultrices sed dui. Ut bibendum,
-                            dui non euismod lobortis, mi neque pretium lacus, in pulvinar libero mauris eu sem. Morbi ut
-                            felis finibus, posuere risus sit amet, malesuada leo.</p>
-                        <p>Nulla quis molestie mi. Cras quis magna dolor. Suspendisse a scelerisque ligula, ullamcorper
-                            imperdiet justo. Ut sit amet nisl malesuada, varius turpis quis, convallis urna. Vestibulum
-                            sed odio eget lorem porta dapibus. Mauris augue sapien, scelerisque vel neque vitae,
-                            vulputate iaculis tellus. Sed accumsan egestas sem congue vehicula. Fusce quis blandit nibh,
-                            non bibendum lorem. Integer maximus mi non eros tincidunt pretium. Curabitur tempor nisi a
-                            aliquet dictum. Sed pellentesque venenatis ex ac fermentum. Aliquam vitae tincidunt urna.
-                        </p>
-                        <p>Nulla sagittis quis purus vitae consequat. Nullam pharetra dignissim tempus. Pellentesque
-                            egestas elit vel arcu condimentum euismod ut eu nisi. Fusce erat lectus, placerat quis
-                            egestas posuere, sollicitudin non ligula. Suspendisse potenti. Fusce vel leo ultrices,
-                            vehicula leo quis, semper quam. Cras mollis quis sem in tempor. Proin sed dui eu arcu
-                            efficitur pulvinar at sed leo. Donec rhoncus rhoncus est, eleifend posuere neque aliquet in.
-                        </p>
+                        <span>
+                            【エンジニア向け転職イベントに出展します！】
+                            <br>
+                            =======================================
+                            <br>
+                            <br>
+                            <br>
+                            <<日本最大級エンジニア転職イベント>>
+                                <br>
+                                7月15日（土）東京ドームシティ プリズムホールにて開催！
+                                <br>
+                                <br>
+                                <br>
+                                入場無料◇入退場自由◇服装自由◇履歴書不要
+                                <br>
+                                ご来場者全員に「選べるギフト券」1,000円分プレゼント！
+                                <br>
+                                <br>
+                                <br>
+                                「type エンジニア転職フェア」詳細ページ
+                                <br>
+                                （https://type.jp/s/fair/e/?waad=cC26NDaq）
+                                <br>
+                                <br>
+                                <br>
+                                ◆ 参加登録はこちら ◆
+                                <br>
+                                https://typefair.my.salesforce-sites.com/visitor/FssVisitorRegistUser/?waad=jEXww6xs
+                                <br>
+                                <br>
+                                <br>
+                                =======================================
+                                <br> 
+                                ぜひ当社ブースへお越しください！
+                                <br>
+                        </span>
                     </section>
 
                     <section class="panel_b">
@@ -168,7 +185,6 @@
                             blandit. Aliquam nec felis lectus. Nullam lorem metus, dignissim sit amet tortor quis,
                             cursus sollicitudin nulla. In fermentum urna quis mollis mattis. Vivamus ipsum eros, lacinia
                             a ligula non, dictum posuere ipsum.</p>
-                        <img src="https://static.tumblr.com/kmw8hta/o6apcizfh/onda-3220299_640.png" />
                     </section>
 
                     <section class="panel_c">
@@ -215,12 +231,6 @@
             </div> <!-- // #carousel -->
 
 
-            <div id="navigation">
-                <label for="button_a" class="label_a"> <span>a</span> </label>
-                <label for="button_b" class="label_b"> <span>b</span> </label>
-                <label for="button_c" class="label_c"> <span>c</span> </label>
-                <label for="button_d" class="label_d"> <span>d</span> </label>
-            </div> <!-- // #navigation -->
 
 
         </div> <!-- // #container -->
