@@ -17,6 +17,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .button-container {
@@ -54,6 +55,13 @@ body {
     background-color: #f0f0f0;
 }
 
+#header.navbar-scrolled {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional shadow effect when scrolled */
+    transition: background-color 0.3s ease-in-out;
+}
+
 /* Media query for responsiveness (optional) */
 /* @media screen and (max-width: 768px) {
     .logo {
@@ -71,7 +79,6 @@ body {
         font-size: 14px;
     }
 } */
-
 
 .uptxt {
     position: relative;
@@ -160,7 +167,7 @@ input[type=submit]:hover {
     background-color: #161616;
 }
 
-.checkbox{
+.checkbox {
     width: 0.78125vw;
     height: 0.78125vw;
 }
@@ -179,24 +186,31 @@ input[type=submit]:hover {
     margin: 0 10vw;
     height: 20vh;
     padding: 10vh 0;
+    color: #C6D3E7;
+}
+
+.footer-full a {
+    color: #C6D3E7;
+    text-decoration: none;
+}
+
+.footer_text {
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .brand img {
-    width: 164px;
-}
-
-.footer-btns {
-    font-size: 20px;
+    width: 200px;
 }
 
 .footerbtns {
-    color: #EEE;
+    color: #C6D3E7;
     text-decoration: none;
     padding: 20px;
 }
 
 .copyright {
-    color: #EEE;
+    color: #C6D3E7;
     background-color: #4e4e4e;
     padding: 2vh 0;
     font-size: 12px;

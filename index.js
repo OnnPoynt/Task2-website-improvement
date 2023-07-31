@@ -15,6 +15,18 @@
     $carousel.on( '.carousel-nav', function() {
       $carousel.flickity('resize');
     });
+
+
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) { // Change '100' to the scroll position where you want the color change to happen
+          $('header').addClass('navbar-scrolled');
+        } else {
+          $('header').removeClass('navbar-scrolled');
+        }
+      });
+    });
+
     
 })(jQuery)
 

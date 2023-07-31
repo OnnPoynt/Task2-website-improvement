@@ -22,21 +22,22 @@
         </div>
         <div class="logo-container">
             <a href="index.html">
-            <img src="Assets\logo.png" alt="Logo">
-        </a>
+                <img src="Assets\logo.png" alt="Logo">
+            </a>
         </div>
         <div class="button-container">
             <button class="header-button">通販プロ</button>
-            <button class="header-button">IT導入補助金</button>
+            <button class="header-button"><a href="ITpage.html">IT導入補助金</a></button>
             <button class="header-button"><a href="contact.html">Contact</a></button>
         </div>
     </header>
+
 
     <div class="uptxt">
         <p class="contact">Contact</p>
         <p class="under-txt">お仕事のご相談、ご依頼に関することなど <br>
             フォームまたは電話からお気軽にお問い合わせください。</p>
-        <p class="tel"><span>TEL</span> <br> 00-0000-0000 </p>
+        <p class="tel"><span>TEL</span> <br> 03-5811-1864 </p>
     </div>
 
     <div class="formbox">
@@ -63,16 +64,32 @@
     </div>
     <section id="footer">
         <div class="footer-full">
+            <div class="footer_text">
+                <p>
+                    通販Aceが<br>
+                    「あるからできる」<br>
+                    施策がある。
+                </p>
+            </div>
+            <div class="footer_info">
+                <a href="Styles\contact.css"><i>Contact us</i></a>
+                <p><i>東京都台東区上野7-12-13 協和ビル3階</i></p>
+                <p><i>〒110-0005 </i></p>
+                <p><i>03-5811-1864</i></p>
+                <p><i>info@ar-system.co.jp</i></p>
+            </div>
+            <div class="footer-btns">
+                <p><a href="index.html"><i>Home</i></a></p>
+                <p><a href=""><i>会社概要</i></a></p>
+                <p><a href=""><i>通販Aceについて</i></a></p>
+                <p><a href=""><i>通販プロ</i></a></p>
+                <p><a href=""><i>IT導入補助金</i></a></p>
+            </div>
             <div class="footer-logo">
                 <a href="index.html" class="brand"><img src="Assets\ace_logo.png" alt=""></a>
             </div>
-            <div class="footer-btns">
-                <a href="/.html" class="footerbtns">会社概要</a>
-                <a href="/.html" class="footerbtns">プライバシーポリシー</a>
-                <a href="/.html" class="footerbtns">情報セキュリティ方針</a>
-                <a href="/.html" class="footerbtns">通販Aceサポートサイト</a>
-            </div>
         </div>
+
         <div class="copyright">
             <p>
                 © A R Systems. All rights reserved.
@@ -80,14 +97,11 @@
         </div>
     </section>
 
-    <script src="/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        setTimeout(function () {
-            $('.loader_bg').fadeToggle();
-        }, 1500);
-    </script>
-
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@2/flickity-fade.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
