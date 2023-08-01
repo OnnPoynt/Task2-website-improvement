@@ -5,17 +5,10 @@
         contain: true,
         wrapAround: true,
         fade: true,
-        imagesLoaded: true
+        imagesLoaded: true,
+        
     });
     
-    let $carousel = $('.fade_carousel').flickity({
-        fade: true,
-    });
-
-    $carousel.on( '.carousel-nav', function() {
-      $carousel.flickity('resize');
-    });
-
 
     $(document).ready(function() {
       $(window).scroll(function() {

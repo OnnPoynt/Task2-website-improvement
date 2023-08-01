@@ -4,7 +4,48 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
 }
+
+.animation {
+    z-index: -999;
+
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: absolute;
+    right: -50%;
+    top: 0;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+h1 {
+    font-family: monospace;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
 
 #header {
     display: flex;
@@ -57,7 +98,8 @@ body {
 
 #header.navbar-scrolled {
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);/* Optional shadow effect when scrolled */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional shadow effect when scrolled */
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -114,11 +156,11 @@ body {
 }
 
 
-/* ///////////////////////WHO WE ARE///////////////////////// */
+/* ////////////////////////////////////////WHO WE ARE///////////////////////////////////// */
 
 #wwa {
     position: relative;
-    margin: 10vh 0;
+    margin: 35vh 0;
 }
 
 .e191_19 {
@@ -229,40 +271,11 @@ body {
     top: 20px;
 }
 
-/* ///////////////////////////mail_order_systems///////////////////////////// */
-#mail_order_systems {
-    margin-top: 20%;
-}
-
-/* ///////////////////////////what_we_do///////////////////////////// */
-#what_we_do {
-    margin-top: 10%;
-}
-
-.wwd_text {
-    width: 783px;
-    position: relative;
-    text-align: center;
-    padding: 0 0 5% 10%;
-}
-
-.wwd_text p {
-    color: rgba(0, 0, 0, 0.18000000715255737);
-    font-family: Mulish;
-    font-size: 128px;
-    margin: 0;
-    font-weight: 900;
-}
-
-/* ////////////////////////////UPDATES////////////////////////////// */
+/* ////////////////////////////////////////UPDATES//////////////////////////////////////// */
 
 #updates {
-    margin-top: 10vh;
+    padding: 10vh 0;
     position: relative;
-}
-
-.container {
-    height: 100vh;
 }
 
 .row {
@@ -271,8 +284,8 @@ body {
 
 /* Converted CSS for .carousel-cell */
 .carousel-cell {
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background: transparent;
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -301,6 +314,7 @@ body {
     width: 100%;
     height: 100%;
     font-size: 16px;
+    text-shadow: 8px 8px 10px #0000008c;
 }
 
 .carousel-main .flickity-button {
@@ -309,7 +323,7 @@ body {
 
 .carousel-nav {
     width: 300px;
-    color: rgb(190, 190, 190);
+    color: rgb(0, 0, 0);
 }
 
 @media screen and (max-width: 1200px) {
@@ -325,7 +339,7 @@ body {
     cursor: pointer;
     margin-right: 1rem;
     font-size: 1.4rem;
-    color: rgb(179, 179, 179);
+    color: rgb(0, 0, 0);
 }
 
 .carousel-nav .carousel-cell span {
@@ -338,7 +352,10 @@ body {
 }
 
 hr {
-    width: 80px;
+    width: 90%;
+    color: #000000;
+    border-style: dotted;
+    border-radius: 50%;
 }
 
 .img img {
@@ -351,7 +368,14 @@ hr {
 }
 
 .carousel-nav .carousel-cell.is-nav-selected {
-    color: black;
+    color: rgb(255, 255, 255);
+}
+
+.carousel-nav .carousel-cell.is-nav-selected hr {
+    width: 90%;
+    color: #ffffff;
+    border-style: dotted;
+    border-radius: 50%;
 }
 
 .carousel-nav .flickity-prev-next-button {
@@ -382,13 +406,11 @@ hr {
     max-height: 100%;
 }
 
-/* //////////////////OUR STORIES////////////////// */
+/* ////////////////////////////////OUR STORIES//////////////////////////////////// */
+
 #ourstories {
     position: relative;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    padding-top: 25vh;
+    margin: 40vh 0;
 }
 
 .ourstories_text :nth-child(1) {
@@ -428,11 +450,141 @@ hr {
     width: fit-content;
 }
 
-/* ////////////////////////OUR CUSTOMERS/////////////////////// */
+.stories{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 25%;
+}
+
+.area{
+    background: #17D2DB;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:60vh;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+/* ///////////////////////////////////OUR CUSTOMERS///////////////////////////////// */
 
 #our_customers {
     position: relative;
-    padding: 20vh 0 20vh 0;
     overflow: hidden;
 }
 
@@ -463,15 +615,15 @@ hr {
     font-weight: 600;
 }
 
-/* ///////////////////CONTACT US////////////////// */
+/* ///////////////////////////////////CONTACT US///////////////////////////////////// */
 
 #contact {
     background-color: #89a4cc7a;
     position: relative;
-    
+
 }
 
-#contact:hover{
+#contact:hover {
     background-color: #609efc;
 }
 
@@ -506,7 +658,7 @@ h5 {
     margin: 0;
 }
 
-h5:hover{
+h5:hover {
     color: #252525;
 }
 
@@ -529,10 +681,10 @@ h5:hover{
     font-size: 1.1111111111111112vw;
 }
 
-/* ///////////////////FOOTER////////////////// */
+/* /////////////////////////////////////FOOTER////////////////////////////////////////// */
 
 #footer {
-    background-color: #2E31A6;
+    background-color: #17D2DB;
 }
 
 .footer-full {
@@ -543,15 +695,15 @@ h5:hover{
     margin: 0 10vw;
     height: 20vh;
     padding: 10vh 0;
-    color: #C6D3E7;
+    color: #ffffff;
 }
 
-.footer-full a{
-    color: #C6D3E7;
+.footer-full a {
+    color: #ffffff;
     text-decoration: none;
 }
 
-.footer_text{
+.footer_text {
     font-size: 40px;
     font-weight: 700;
 }
@@ -561,7 +713,6 @@ h5:hover{
 }
 
 .footerbtns {
-    color: #C6D3E7;
     text-decoration: none;
     padding: 20px;
 }
@@ -575,7 +726,7 @@ h5:hover{
     justify-content: center;
 }
 
-/* ///////////////////////scroll to top////////////////////// */
+/* /////////////////////////////////////scroll to top/////////////////////////////////// */
 
 #scrollToTop {
     position: fixed;
@@ -604,11 +755,22 @@ h5:hover{
 
 
 /* left to do:
+who we are big text and regular
 our stories link -- 30mins
-new who we are design -- 1hr
+company goals and mission text revamp -- 45mins
 PRO page -- 2hrs
 mobile view -- 5hrs
 image search -- 1hr
-company goals and mission text revamp -- 45mins
 mobile page -- 5hrs
+reduce size of button contact page
+toppu
+make header text cleaner
+
+
+
+REMEMBER:
+check header in every page
+check footer in every page.
+links in every page
+
 */
