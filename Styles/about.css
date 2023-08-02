@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
 }
 
 #header {
@@ -16,7 +17,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 999;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .button-container {
@@ -41,17 +43,25 @@ body {
     padding: 10px 20px;
     margin: 0 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .header-button a {
-    color: #4e4e4e;
+    color: #000000;
     text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .header-button:hover {
     background-color: #f0f0f0;
+}
+
+#header.navbar-scrolled {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional shadow effect when scrolled */
+    transition: background-color 0.3s ease-in-out;
 }
 
 /* Media query for responsiveness (optional) */
@@ -80,9 +90,11 @@ body {
     width: 100vw;
     /* height: 100vh; */
 }
-.top_image1{
+
+.top_image1 {
     position: absolute;
     width: 100vw;
+    height: auto;
     top: -40vh;
 }
 
@@ -133,12 +145,46 @@ tr :nth-child(1) {
     padding-right: 4%;
 }
 
+/* //////////////////////QUALITIES////////////////////// */
+
 #qualities {
-    margin: 40vh 0;
+    margin: 5vh 0 25vh 0;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+    height: 70vh;
 }
 
+.text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 
+.block {
+    background-color: rgb(255, 255, 255, 0.7);
+    width: fit-content;
+    border-radius: 40px;
+    margin: 0 auto;
+    padding: 1% 10%;
+    font-weight: 500;
+    text-shadow: 8px 8px 10px #0000008c;
+}
 
+.text span p:nth-child(1) {
+    font-size: 40px;
+    color: #007bff;
+    font-weight: 600;
+    margin: 5vh 0 0 0;
+}
+
+.text span p i {
+    font-size: 20px;
+    color: #000000;
+}
 
 
 /* ////////////////////////parallax//////////////////////// */
@@ -163,7 +209,7 @@ tr :nth-child(1) {
     text-align: center;
 }
 
-.memo{
+.memo {
     background-color: rgb(255, 255, 255, 0.7);
     border-radius: 40px;
     padding: 20px;
@@ -171,17 +217,17 @@ tr :nth-child(1) {
 
 .buffer {
     width: 100%;
-    min-height: 60vh;
+    min-height: 30vh;
     background-color: var(--color);
 }
 
 .parallax-container2 {
     flex-direction: row;
     flex-wrap: wrap;
-
     padding: 6rem 0;
     background-image: url(https://images.unsplash.com/photo-1585424536945-26663ea69d52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80);
     gap: 1.6em;
+    position: relative;
 }
 
 .parallax-container h1 {
@@ -220,6 +266,8 @@ h3 {
 .card {
     display: flex;
     max-width: 320px;
+    max-height: 58vh;
+    min-height: 50vh;
     flex-direction: column;
     align-items: center;
 
@@ -250,18 +298,27 @@ h3 {
     background-image: url(https://images.unsplash.com/photo-1628746404106-4d3843b231b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F2aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
 }
 
-
-
-
-
-
-
+.parallax-container2 h1 {
+    position: absolute;
+    top: 10%;
+    color: #4e4e4e;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 40px;
+    font-size: 80px;
+    font-weight: 800;
+    margin: 0;
+}
 
 /* ///////////////////CONTACT US////////////////// */
 
 #contact {
     background-color: #89a4cc7a;
     position: relative;
+
+}
+
+#contact:hover {
+    background-color: #609efc;
 }
 
 .background-txt {
@@ -295,6 +352,10 @@ h5 {
     margin: 0;
 }
 
+h5:hover {
+    color: #252525;
+}
+
 .yes {
     float: right;
     position: absolute;
@@ -317,7 +378,7 @@ h5 {
 /* ///////////////////FOOTER////////////////// */
 
 #footer {
-    background-color: #2E31A6;
+    background-color: #17D2DB;
 }
 
 .footer-full {
@@ -328,24 +389,30 @@ h5 {
     margin: 0 10vw;
     height: 20vh;
     padding: 10vh 0;
+    color: #ffffff;
+}
+
+.footer-full a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer_text {
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .brand img {
-    width: 164px;
-}
-
-.footer-btns {
-    font-size: 20px;
+    width: 200px;
 }
 
 .footerbtns {
-    color: #EEE;
     text-decoration: none;
     padding: 20px;
 }
 
 .copyright {
-    color: #EEE;
+    color: #C6D3E7;
     background-color: #4e4e4e;
     padding: 2vh 0;
     font-size: 12px;
@@ -353,6 +420,41 @@ h5 {
     justify-content: center;
 }
 
+.footer-full .footer-btns s {
+    color: #000000;
+}
 
+/* /////////////////////////////////////scroll to top/////////////////////////////////// */
 
-/* ///////////////////////////////////parallax//////////////////////////// */
+#scrollToTop {
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: none;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#scrollToTop:before {
+    content: "\2191";
+    /* Unicode for the upward arrow */
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* About us left to do
+map area blank space
+scroll x 
+scroll to top
+cards will have our services i think 2 for now. will ask tomorrow for new
+header and footer update
+company goals and mission text revamp
+*/

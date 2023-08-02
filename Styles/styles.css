@@ -10,7 +10,6 @@ body {
 
 .animation {
     z-index: -999;
-
 }
 
 .bg {
@@ -59,7 +58,7 @@ h1 {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 999;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -85,13 +84,14 @@ h1 {
     padding: 10px 20px;
     margin: 0 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .header-button a {
-    color: #4e4e4e;
+    color: #000000;
     text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .header-button:hover {
@@ -166,116 +166,74 @@ h1 {
 
 #wwa {
     position: relative;
-    margin: 35vh 0;
+    margin: 15vh 0 35vh 0;
 }
 
-.e191_19 {
+.wwa {
+    width: 66%;
+    height: 55vh;
+    position: relative;
+    margin: 0 auto;
     overflow: hidden;
 }
 
-.e191_19 {
-    width: 1154px;
-    height: 484px;
-    position: relative;
-    position: relative;
-    margin: 0 auto;
-}
-
-.e191_18 {
+.main_blue {
     background-color: rgba(137.00000703334808, 204.00000303983688, 255, 1);
     width: 1024px;
     height: 484px;
     position: absolute;
     left: 130px;
     top: 0px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-radius: 30px;
 }
 
-.e191_17 {
+.wwa_image {
     background-color: rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
     width: 299px;
     height: 432px;
     position: absolute;
     left: 0px;
     top: 26px;
-    border-top-left-radius: 47px;
-    border-top-right-radius: 47px;
-    border-bottom-left-radius: 47px;
-    border-bottom-right-radius: 47px;
+    border-radius: 47px;
+    overflow: hidden;
 }
 
-.e120_64 {
-    width: 633px;
-    height: 324px;
-    position: absolute;
-    left: 349px;
-    top: 74px;
+.wwa_image img {
+    height: 100%;
+    overflow: hidden;
 }
 
-.e102_31 {
+.wwa_text {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
     color: rgba(0, 0, 0, 1);
-    width: 405px;
-    height: 54px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    font-family: Titillium Web;
-    text-align: center;
-    font-size: 48px;
-    letter-spacing: 0.10000000149011612;
-    line-height: px;
-}
-
-.e102_32 {
-    color: rgba(0, 0, 0, 1);
-    width: 551px;
-    height: 208px;
-    position: absolute;
-    left: 82px;
-    top: 78px;
-    font-family: Titillium Web;
     text-align: left;
     font-size: 26px;
-    letter-spacing: 0.10000000149011612;
-    line-height: px;
 }
 
-.e120_63 {
-    width: 157px;
-    height: 40px;
-    position: absolute;
-    left: 92px;
-    top: 284px;
+.wwa_text p {
+    font-size: 48px;
 }
 
-.e117_50 {
-    color: rgba(0, 0, 0, 1);
-    width: 94px;
-    height: 40px;
-    position: absolute;
-    left: 63px;
-    top: 0px;
-    font-family: Titillium Web;
-    text-align: center;
-    font-size: 20px;
-    letter-spacing: 0.10000000149011612;
-    line-height: px;
+.wwa_text span:nth-child(2) {
+    font-size: 16px;
 }
 
-.e117_49 {
-    border: 1px solid rgba(0, 0, 0, 1);
+.wwa_text a {
+    text-decoration: none;
 }
 
-.e117_49 {
-    width: 47px;
-    height: 0px;
-    position: absolute;
-    left: 0px;
-    top: 20px;
+.wwa_heading_text {
+    font-size: 100px;
+    font-weight: 1000;
+    color: #2e30a6d2;
+    text-decoration: underline;
+    position: relative;
+    left: 10%;
 }
+
 
 /* ////////////////////////////////////////UPDATES//////////////////////////////////////// */
 
@@ -436,9 +394,10 @@ hr {
 
 .stories h1 {
     text-align: center;
-    font-size: 40px;
-    color: #000000;
+    font-size: 60px;
+    color: #ffffff;
     margin-bottom: 5rem;
+    padding-top: 10vh;
 }
 
 .slide-row {
@@ -510,6 +469,7 @@ hr {
     background: #000000;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    margin-bottom: 2vh;
 }
 
 .btn.active {
@@ -519,6 +479,20 @@ hr {
 .testimonial {
     width: 100%;
     overflow: hidden;
+}
+
+.learn_more {
+    background-color: #27BCE6 !important;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.learn_more a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 /* ///////////////////////////////////OUR CUSTOMERS///////////////////////////////// */
@@ -670,6 +644,10 @@ h5:hover {
     justify-content: center;
 }
 
+.footer-full .footer-btns s {
+    color: #000000;
+}
+
 /* /////////////////////////////////////scroll to top/////////////////////////////////// */
 
 #scrollToTop {
@@ -699,22 +677,13 @@ h5:hover {
 
 
 /* left to do:
-who we are big text and regular
-our stories link -- 30mins
-company goals and mission text revamp -- 45mins
-mobile view -- 5hrs
-image search -- 1hr
-reduce size of button contact page
 toppu
-make header text cleaner
-
-
-REMEMBER:
-check header in every page
-check footer in every page.
-links in every page
-
+kochira links
 
 optional:
 underline on button select
+
+
+
+ask about about page
 */

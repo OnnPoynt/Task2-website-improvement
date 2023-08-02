@@ -19,12 +19,12 @@
         </div>
         <div class="logo-container">
             <a href="index.html">
-            <img src="Assets\logo.png" alt="Logo">
-        </a>
+                <img src="Assets\logo.png" alt="Logo">
+            </a>
         </div>
         <div class="button-container">
-            <button class="header-button">通販プロ</button>
-            <button class="header-button">IT導入補助金</button>
+            <button disabled class="header-button"><s>通販プロ</s></button>
+            <button class="header-button"><a href="ITpage.html">IT導入補助金</a></button>
             <button class="header-button"><a href="contact.html">Contact</a></button>
         </div>
     </header>
@@ -101,7 +101,29 @@
     </section>
     <section id="qualities">
         <div class="text">
-
+            <div class="block">
+                <span>
+                    <p>
+                        Laughter to Members <i>社員に笑顔を</i></p>
+                    <p>
+                        私たちのシステムは、お客様の笑顔のためにあります。 <br>そしてお客様に喜んでいただける製品を提供するために、 まず私たちが笑顔で業務に当たることを大切にしています。
+                    </p>
+                </span>
+                <span>
+                    <p>
+                        Impression to Client <i>顧客に満足を</i></p>
+                    <p>
+                        お客様のご要望にお応えするだけの会社ではありません。 <br>お客様の業務を徹底的に理解し、 最適なソリューションを先回りでご提案します。
+                    </p>
+                </span>
+                <span>
+                    <p>
+                        Value to Society <i>社会に価値を</i></p>
+                    <p>
+                        私たちのパーパスは、「日本のものづくりを元気にする」ことです。 <br>煩雑な業務を私たちがシステムを通じて全て請け負うことで、 ものづくりに携わる全ての人を応援します。
+                    </p>
+                </span>
+            </div>
         </div>
     </section>
 
@@ -126,9 +148,10 @@
     <section class="buffer"></section>
 
     <section class="parallax-container parallax-container2">
+        <h1>Our services</h1>
         <div class="card">
             <div class="card-img"></div>
-            <h3>Hiking</h3>
+            <h3>通販Pro</h3>
             <p>
                 Explore the myriad of trails through the mountainous. Choose the
                 difficulty appropriate to your fitness level.
@@ -137,37 +160,23 @@
         </div>
         <div class="card">
             <div class="card-img"></div>
-            <h3>Rock climbing</h3>
+            <h3>通販Ace</h3>
             <p>
-                The goal is to reach the summit of a formation or the endpoint of a
-                usually pre-defined route without falling
+                通販AceはEC・通販専用の基幹システムです。 顧客、広告、受注、商品、定期、物流、カスタマーセンター・ 様々な場所やツールに散らばるデータを一元管理することで、
+                「より精緻なマーケティング施策」と「オペレーション原価の削減施策」を実現するシステムです。
             </p>
             <a href="#">Learn more</a>
         </div>
         <div class="card">
             <div class="card-img"></div>
-            <h3>Caving</h3>
+            <h3>ECサイト開発</h3>
             <p>
-                Exploring underground through networks of tunnels and passageways,
-                which can be natural or artificial.
-            </p>
+                ご要望に応じたECサイトの設計・開発を行います。 </p>
             <a href="#">Learn more</a>
         </div>
     </section>
 
     <!-- <section class="buffer"></section>     -->
-
-
-
-
-
-
-
-
-
-
-
-
 
     <section id="contact">
         <a href="contact.html">
@@ -184,18 +193,36 @@
             </div>
         </a>
     </section>
+
+
     <section id="footer">
         <div class="footer-full">
+            <div class="footer_text">
+                <p>
+                    通販Aceが<br>
+                    「あるからできる」<br>
+                    施策がある。
+                </p>
+            </div>
+            <div class="footer_info">
+                <a href="contact.html">Contact us</a>
+                <p>東京都台東区上野7-12-13 協和ビル3階</p>
+                <p>〒110-0005</p>
+                <p>03-5811-1864</p>
+                <p>info@ar-system.co.jp</p>
+            </div>
+            <div class="footer-btns">
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">会社概要</a></p>
+                <p><a href="https://ace-ars.jp/">通販Aceについて</a></p>
+                <p><s>通販プロ</s></p>
+                <p><a href="ITpage.html">IT導入補助金</a></p>
+            </div>
             <div class="footer-logo">
                 <a href="index.html" class="brand"><img src="Assets\ace_logo.png" alt=""></a>
             </div>
-            <div class="footer-btns">
-                <a href="/.html" class="footerbtns">会社概要</a>
-                <a href="/.html" class="footerbtns">プライバシーポリシー</a>
-                <a href="/.html" class="footerbtns">情報セキュリティ方針</a>
-                <a href="/.html" class="footerbtns">通販Aceサポートサイト</a>
-            </div>
         </div>
+
         <div class="copyright">
             <p>
                 © A R Systems. All rights reserved.
@@ -203,6 +230,13 @@
         </div>
     </section>
 
+    <div id="scrollToTop"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@2/flickity-fade.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

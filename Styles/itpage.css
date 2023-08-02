@@ -5,6 +5,7 @@ body {
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 p {
@@ -32,7 +33,7 @@ h2 {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 999;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -58,13 +59,14 @@ h2 {
     padding: 10px 20px;
     margin: 0 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .header-button a {
-    color: #4e4e4e;
+    color: #000000;
     text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .header-button:hover {
@@ -73,7 +75,8 @@ h2 {
 
 #header.navbar-scrolled {
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);/* Optional shadow effect when scrolled */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional shadow effect when scrolled */
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -262,11 +265,10 @@ th {
 #contact {
     background-color: #89a4cc7a;
     position: relative;
-    margin-top: 10vh;
-    
+    margin-top: 20vh;
 }
 
-#contact:hover{
+#contact:hover {
     background-color: #609efc;
 }
 
@@ -301,7 +303,7 @@ h5 {
     margin: 0;
 }
 
-h5:hover{
+h5:hover {
     color: #252525;
 }
 
@@ -338,15 +340,15 @@ h5:hover{
     margin: 0 10vw;
     height: 20vh;
     padding: 10vh 0;
-    color: #C6D3E7;
+    color: #ffffff;
 }
 
-.footer-full a{
-    color: #C6D3E7;
+.footer-full a {
+    color: #ffffff;
     text-decoration: none;
 }
 
-.footer_text{
+.footer_text {
     font-size: 40px;
     font-weight: 700;
 }
@@ -356,7 +358,6 @@ h5:hover{
 }
 
 .footerbtns {
-    color: #C6D3E7;
     text-decoration: none;
     padding: 20px;
 }
@@ -370,7 +371,11 @@ h5:hover{
     justify-content: center;
 }
 
-/* ///////////////////////scroll to top////////////////////// */
+.footer-full .footer-btns s {
+    color: #000000;
+}
+
+/* /////////////////////////////////////scroll to top/////////////////////////////////// */
 
 #scrollToTop {
     position: fixed;
@@ -395,3 +400,8 @@ h5:hover{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* It page left to do
+header and footer clean
+footer font padding and size.
+*/

@@ -16,7 +16,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 999;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -42,13 +42,14 @@ body {
     padding: 10px 20px;
     margin: 0 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .header-button a {
-    color: #4e4e4e;
+    color: #000000;
     text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .header-button:hover {
@@ -156,10 +157,10 @@ input[type=submit] {
     background-color: #000000;
     color: white;
     /* padding: 60px 20px; */
-    padding: 5% 1%;
+    padding: 2% 1%;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 60%;
     margin: 10% 0%;
 }
 
@@ -186,11 +187,11 @@ input[type=submit]:hover {
     margin: 0 10vw;
     height: 20vh;
     padding: 10vh 0;
-    color: #C6D3E7;
+    color: #ffffff;
 }
 
 .footer-full a {
-    color: #C6D3E7;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -204,7 +205,6 @@ input[type=submit]:hover {
 }
 
 .footerbtns {
-    color: #C6D3E7;
     text-decoration: none;
     padding: 20px;
 }
@@ -217,3 +217,39 @@ input[type=submit]:hover {
     display: flex;
     justify-content: center;
 }
+
+.footer-full .footer-btns s {
+    color: #000000;
+}
+
+/* /////////////////////////////////////scroll to top/////////////////////////////////// */
+
+#scrollToTop {
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: none;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#scrollToTop:before {
+    content: "\2191";
+    /* Unicode for the upward arrow */
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* It page left to do
+some background
+header and footer clean
+button size reduce
+*/
