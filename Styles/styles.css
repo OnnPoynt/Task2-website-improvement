@@ -166,7 +166,7 @@ h1 {
 
 #wwa {
     position: relative;
-    margin: 15vh 0 35vh 0;
+    /* margin: 15vh 0 35vh 0; */
 }
 
 .wwa {
@@ -234,6 +234,16 @@ h1 {
     left: 10%;
 }
 
+.tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+}
+
+.tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
 
 /* ////////////////////////////////////////UPDATES//////////////////////////////////////// */
 
@@ -377,7 +387,7 @@ hr {
 
 #ourstories {
     position: relative;
-    margin: 40vh 0 30vh 0;
+    margin: 0 0 30vh 0;
     background-image: radial-gradient(at 40% 20%, rgb(122, 217, 255) 0px, transparent 50%),
         radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
         radial-gradient(at 0% 50%, rgb(0, 162, 255) 0px, transparent 50%),
@@ -417,6 +427,7 @@ hr {
     top: 0;
     right: 0;
     height: 100%;
+    z-index: 999;
 }
 
 .user-img img {
@@ -424,6 +435,7 @@ hr {
     border-radius: 10px;
     width: 320px;
     object-fit: cover;
+    z-index: 999;
 }
 
 .user-text {
@@ -542,7 +554,7 @@ hr {
 }
 
 #contact:hover {
-    background-color: #609efc;
+    background-color: #0400ffcb;
 }
 
 .background-txt {
@@ -602,7 +614,7 @@ h5:hover {
 /* /////////////////////////////////////FOOTER////////////////////////////////////////// */
 
 #footer {
-    background-color: #17D2DB;
+    background-color: #2E31A6;
 }
 
 .footer-full {
@@ -683,7 +695,13 @@ kochira links
 optional:
 underline on button select
 
-
+landing image to the right
+timeline in landing
+coming soon page
+entire image our stories
+scrolling banner
+our services text
+IT and contact page background
 
 ask about about page
 */

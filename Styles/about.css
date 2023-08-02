@@ -150,10 +150,11 @@ tr :nth-child(1) {
 #qualities {
     margin: 5vh 0 25vh 0;
     background-color: #e5e5f7;
+    height: 70vh;
+
     opacity: 0.8;
     background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
     background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
-    height: 70vh;
 }
 
 .text {
@@ -378,7 +379,7 @@ h5:hover {
 /* ///////////////////FOOTER////////////////// */
 
 #footer {
-    background-color: #17D2DB;
+    background-color: #2E31A6;
 }
 
 .footer-full {

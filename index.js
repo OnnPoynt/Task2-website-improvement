@@ -81,3 +81,32 @@ btn[1].onclick = function () {
 //   }
 //   this.classList.add("active");
 // };
+
+
+function loopTopSlider(){
+  var sliderSize = $('.slide .logos img').width();
+  $('.slide .logos').css({'width':sliderSize*2+'px'});
+  $('.slide .logos').find('img').clone().appendTo('.slide .logos');  //appends 2 images
+};
+$(function(){
+  loopTopSlider();
+});
+
+
+
+
+$(document).on("scroll", function() {
+  var pageTop = $(document).scrollTop();
+  var pageBottom = pageTop + $(window).height();
+  var tags = $(".tag");
+
+  for (var i = 0; i < tags.length; i++) {
+    var tag = tags[i];
+
+    if ($(tag).position().top < pageBottom) {
+      $(tag).addClass("visible");
+    } else {
+      $(tag).removeClass("visible");
+    }
+  }
+});

@@ -4,12 +4,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 18px;
     overflow-x: hidden;
-}
-
-p {
-    margin: 0;
+    scroll-behavior: smooth;
 }
 
 hr {
@@ -329,7 +325,7 @@ h5:hover {
 /* ///////////////////FOOTER////////////////// */
 
 #footer {
-    background-color: #17D2DB;
+    background-color: #2E31A6;
 }
 
 .footer-full {
@@ -351,6 +347,18 @@ h5:hover {
 .footer_text {
     font-size: 40px;
     font-weight: 700;
+}
+
+.footer_text p{
+    margin: auto !important;
+}
+
+.footer_info p{
+    margin: auto !important;
+}
+
+.footer-btns p{
+    margin: auto !important;
 }
 
 .brand img {
@@ -400,6 +408,7 @@ h5:hover {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 /* It page left to do
 header and footer clean
