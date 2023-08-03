@@ -12,18 +12,33 @@
 
 <body>
     <header id="header">
-        <div class="button-container">
-            <button class="header-button"><a href="home.html">Home</a></button>
-            <button class="header-button"><a href="https://ace-ars.jp/  ">通販Aceについて</a></button>
-            <button class="header-button"><a href="about.html">会社概要</a></button>
-        </div>
         <div class="logo-container">
             <a href="home.html">
                 <img src="Assets\logo.png" alt="Logo">
             </a>
         </div>
+
         <div class="button-container">
-            <button disabled class="header-button"><s>通販プロ</s></button>
+            <button class="header-button"><a href="home.html">Home</a></button>
+            <button class="header-button"><a href="https://ace-ars.jp/">通販Aceについて</a></button>
+            <button class="header-button"><a href="about.html">会社概要</a></button>
+            <button class="header-button"><a href="coming_soon.html">Coming soon</a></button>
+            <button class="header-button"><a href="ITpage.html">IT導入補助金</a></button>
+            <button class="header-button"><a href="contact.html">Contact</a></button>
+        </div>
+
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <!-- Place your mobile menu items here -->
+            <button class="header-button"><a href="home.html">Home</a></button>
+            <button class="header-button"><a href="https://ace-ars.jp/">通販Aceについて</a></button>
+            <button class="header-button"><a href="about.html">会社概要</a></button>
+            <button class="header-button"><a href="coming_soon.html">Coming soon</a></button>
             <button class="header-button"><a href="ITpage.html">IT導入補助金</a></button>
             <button class="header-button"><a href="contact.html">Contact</a></button>
         </div>
@@ -49,7 +64,7 @@
         </div>
     </section>
 
-    <div class="tag wwa_heading_text">
+    <div class="tag heading_text">
         <p>
             Who We Are
         </p>
@@ -62,10 +77,9 @@
             <div class=wwa_text>
                 <span>
                     <p>We are ARS</p>
-                    We at Always Rising Systems aim to keep updating with the AI era of
-                    computer
-                    software to bring you the most advanced and versatile mail order software system.
-                    <br>
+                    私たちA.R. AI時代に向けてシステムは常にアップデートを続けており、
+                    特許取得済みのソフトウェア通販ACEの導入により、
+                    市場で最も先進的で多用途な通販ソフトウェアシステムを提供しています。 <br>
                     <br>
                 </span>
                 <span><a href="about.html">&#10230; Learn more</a></span>
@@ -74,7 +88,7 @@
         </div>
     </section>
 
-    <div class="tag wwa_heading_text">
+    <div class="tag heading_text">
         <p>
             Updates
         </p>
@@ -120,8 +134,10 @@
                 <div class="col-11">
                     <div class="carousel carousel-main" data-flickity='{
                        "contain": true,
-                       "pageDots": false
-                     }'>
+                       "pageDots": false,
+                       "adaptiveHeight": true,
+                       "dragThreshold": 30
+                    }'>
                         <div class="carousel-cell">
                             <span>
                                 「【中編】越境ECコトハジメ ~中国から見た日本の可能~」<br>
@@ -207,11 +223,11 @@
                                 予約してから参加すると得点あり！<br>
                                 https://digital-career-fair.com <br>
                                 <br>
-                                ◆開催日　：　　2023年7月1日（土）<br>
-                                ◆時間　　：　　10：30～18：00 <br>
-                                ◆会場　　：　　東京ドームシティ　プリズムホール　<br>
-                                　　　　　　　　　東京都文京区後楽1-3-61 <br>
-                                ◆主催　　：　　東京都（運営：東京しごと財団）<br>
+                                ◆開催日　：　2023年7月1日（土）<br>
+                                ◆時間　　：　10：30～18：00 <br>
+                                ◆会場　　：　東京ドームシティプリズムホール<br>
+                                　　　　　　　東京都文京区後楽1-3-61 <br>
+                                ◆主催　　：　東京都（運営：東京しごと財団）<br>
                             </span>
                         </div>
                         <div class="carousel-cell"></div>
@@ -222,7 +238,7 @@
         </div>
     </section>
 
-    <div class="tag wwa_heading_text">
+    <div class="tag heading_text">
         <p>
             Our Stories
         </p>
@@ -272,7 +288,7 @@
     </section>
 
 
-    <div class="tag wwa_heading_text">
+    <div class="tag heading_text">
         <p>
             Our Customers
         </p>
@@ -306,39 +322,71 @@
 
     <section id="footer">
         <div class="footer-full">
-          <div class="footer_text">
-            <p>
-              通販Aceが<br>
-              「あるからできる」<br>
-              施策がある。
-            </p>
-          </div>
-          <div class="footer_info">
-            <a href="contact.html">Contact us</a>
-            <p>東京都台東区上野7-12-13 協和ビル3階</p>
-            <p>〒110-0005</p>
-            <p>03-5811-1864</p>
-            <p>info@ar-system.co.jp</p>
-          </div>
-          <div class="footer-btns">
-            <p><a href="home.html">Home</a></p>
-            <p><a href="about.html">会社概要</a></p>
-            <p><a href="https://ace-ars.jp/">通販Aceについて</a></p>
-            <p><s>通販プロ</s></p>
-            <p><a href="ITpage.html">IT導入補助金</a></p>
-          </div>
-          <div class="footer-logo">
-            <a href="home.html" class="brand"><img src="Assets/ace_logo.png" alt=""></a>
-          </div>
+            <div class="footer_text">
+                <p>
+                    通販Aceが<br>
+                    「あるからできる」<br>
+                    施策がある。
+                </p>
+            </div>
+            <div class="footer_info">
+                <p><a href="contact.html">Contact us</a></p>
+                <p>東京都台東区上野7-12-13 協和ビル3階</p>
+                <p>〒110-0005</p>
+                <p>03-5811-1864</p>
+                <p>info@ar-system.co.jp</p>
+            </div>
+            <div class="footer-btns">
+                <p><a href="home.html">Home</a></p>
+                <p><a href="about.html">会社概要</a></p>
+                <p><a href="https://ace-ars.jp/">通販Aceについて</a></p>
+                <p><a href="coming_soon.html">coming soon</a></p>
+                <p><a href="ITpage.html">IT導入補助金</a></p>
+            </div>
+            <div class="footer-logo">
+                <a href="home.html" class="brand"><img src="Assets/ace_logo.png" alt=""></a>
+            </div>
         </div>
-    
+
+        <div class="mobilefooter">
+            <div class="footer-mobile">
+                <div class="footer-top">
+                    <div class="footer_text">
+                        <p>
+                            通販Aceが<br>
+                            「あるからできる」<br>
+                            施策がある。
+                        </p>
+                    </div>
+                    <div class="footer-logo">
+                        <a href="home.html" class="brand"><img src="Assets/ace_logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="footer_info">
+                        <p><a href="contact.html">Contact us</a></p>
+                        <p>東京都台東区上野7-12-13 協和ビル3階</p>
+                        <p>〒110-0005</p>
+                        <p>03-5811-1864</p>
+                        <p>info@ar-system.co.jp</p>
+                    </div>
+                    <div class="footer-btns">
+                        <p><a href="home.html">Home</a></p>
+                        <p><a href="about.html">会社概要</a></p>
+                        <p><a href="https://ace-ars.jp/">通販Aceについて</a></p>
+                        <p><a href="coming_soon.html">coming soon</a></p>
+                        <p><a href="ITpage.html">IT導入補助金</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="copyright">
-          <p>
-            © A R Systems. All rights reserved.
-          </p>
+            <p>
+                © A R Systems. All rights reserved.
+            </p>
         </div>
-      </section>
-    
+    </section>
+
     <div id="scrollToTop"></div>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"

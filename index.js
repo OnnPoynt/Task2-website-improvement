@@ -59,7 +59,7 @@ btn[0].onclick = function () {
 };
 
 btn[1].onclick = function () {
-  slide.style.transform = "translateX(-800px)";
+  slide.style.transform = "translateX(-100vw)";
   for (i = 0; i < 2; i++) {
     btn[i].classList.remove("active");
   }
@@ -110,3 +110,9 @@ $(document).on("scroll", function() {
     }
   }
 });
+
+
+function toggleMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileMenu.classList.toggle('open');
+}

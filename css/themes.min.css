@@ -4,11 +4,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-html {
-    overflow-x: hidden;
-}
+ @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --bs-blue: #1717e5;
@@ -94,6 +90,7 @@ body {
     margin: 0;
     font-family: var(--bs-body-font-family);
     font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
     text-align: var(--bs-body-text-align);
@@ -296,7 +293,7 @@ button {
 [type=button],
 [type=submit],
 button {
-    /* -webkit-appearance: button; */
+    -webkit-appearance: button
 }
 
 [type=button]:not(:disabled),
@@ -334,7 +331,7 @@ button:not(:disabled) {
 
 ::file-selector-button {
     font: inherit;
-    /* -webkit-appearance: button */
+    -webkit-appearance: button
 }
 
 [hidden] {
@@ -343,7 +340,7 @@ button:not(:disabled) {
 
 .lead {
     font-size: calc(1.258rem + .096vw);
-    font-weight: 300;
+    font-weight: 300
 }
 
 @media (min-width:1200px) {
@@ -415,8 +412,7 @@ button:not(:disabled) {
 .display-6 {
     font-size: calc(1.375rem + 1.5vw);
     font-weight: 300;
-    line-height: 1.2;
-    color: #fff;
+    line-height: 1.2
 }
 
 @media (min-width:1200px) {
@@ -467,7 +463,7 @@ button:not(:disabled) {
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto
 }
 
 @media (min-width:576px) {
@@ -562,7 +558,6 @@ button:not(:disabled) {
     flex: 0 0 auto;
     width: 100%;
     opacity: 0.8 !important;
-    width: 60% !important;
 }
 
 .g-0,
@@ -639,10 +634,6 @@ button:not(:disabled) {
     .col-md-9 {
         flex: 0 0 auto;
         width: 75%
-    }
-
-    .col-md-9 p {
-        font-weight: 400;
     }
 
     .col-md-11 {
@@ -977,10 +968,9 @@ button:not(:disabled) {
 }
 
 .btn:hover {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-    transition: all .5s ease-in-out 0s !important;
+    color: var(--bs-btn-hover-color);
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color)
 }
 
 .btn:focus {
@@ -1035,16 +1025,16 @@ button:not(:disabled) {
     --bs-btn-bg: rgb(23, 210, 219);
     --bs-btn-border-color: rgb(23, 210, 219);
     --bs-btn-hover-color: #151515;
-    --bs-btn-hover-bg: rgb(136, 249, 255);
-    --bs-btn-hover-border-color: rgb(130, 249, 255);
+    --bs-btn-hover-bg: rgb(23, 210, 219);
+    --bs-btn-hover-border-color: rgb(23, 210, 219);
     --bs-btn-focus-shadow-rgb: 218, 110, 20;
     --bs-btn-active-color: #151515;
     --bs-btn-active-bg: rgb(23, 210, 219);
     --bs-btn-active-border-color: rgb(23, 210, 219);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(21, 21, 21, 0.125);
     --bs-btn-disabled-color: #151515;
-    --bs-btn-disabled-bg: rgb(220, 253, 255);
-    --bs-btn-disabled-border-color: rgb(220, 253, 255);
+    --bs-btn-disabled-bg: rgb(23, 210, 219);
+    --bs-btn-disabled-border-color: rgb(23, 210, 219);
 }
 
 .btn-light {
@@ -1078,7 +1068,7 @@ button:not(:disabled) {
     --bs-btn-active-shadow: inset 0 3px 5px rgba(21, 21, 21, 0.125);
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #343a40;
-    --bs-btn-disabled-border-color: #343a40;
+    --bs-btn-disabled-border-color: #343a40
 }
 
 .btn-outline-primary {
@@ -1453,7 +1443,7 @@ button:not(:disabled) {
 }
 
 .w-100 {
-    width: 100% !important;
+    width: 100% !important
 }
 
 .vw-100 {
@@ -1520,7 +1510,7 @@ button:not(:disabled) {
 
 .my-2 {
     margin-top: .5rem !important;
-    margin-bottom: .5rem !important;
+    margin-bottom: .5rem !important
 }
 
 .my-3 {
@@ -1815,9 +1805,13 @@ button:not(:disabled) {
     text-align: right !important
 }
 
-.logo-img {
+.logo-img{
     width: 100%;
     height: 100%;
+}
+
+.logo-img img{
+
 }
 
 .text-center {
@@ -1835,9 +1829,7 @@ button:not(:disabled) {
 
 .text-secondary {
     --bs-text-opacity: 1;
-    /* color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important */
-    color: #868585;
-    font-weight: 400;
+    color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important
 }
 
 .text-success {
@@ -2108,16 +2100,16 @@ img {
 }
 
 .bg-gray-100 {
-    background-color: #68b1ff60
+    background-color: #f8f9fa
 }
 
 .bg-gray-900 {
     background-color: #212529
 }
 
-.bg-blue-900 {
-    /* color: #2E31A6; */
-    background-color: #297fffc2;
+.bg-blue-900{
+   color: #2E31A6;
+   background-color: #3235dd;
 }
 
 .bg-black {
@@ -2534,17 +2526,16 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
 
 #footer {
     background-color: #2E31A6;
-    font-family: 'Noto Sans JP', sans-serif !important;
 }
 
 .footer-full {
-    position: relative !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    margin: 0 10vw !important;
-    height: 36vh !important;
-    padding: 10vh 0 !important;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10vw;
+    height: 36vh;
+    padding: 10vh 0;
     color: #ffffff;
 }
 
@@ -2554,8 +2545,8 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
 }
 
 .footer_text {
-    font-size: 40px !important;
-    font-weight: 700 !important;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .brand img {
@@ -2563,24 +2554,22 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
 }
 
 .footerbtns {
-    text-decoration: none !important;
-    padding: 20px !important;
+    text-decoration: none;
+    padding: 20px;
 }
 
 .copyright {
-    color: #C6D3E7 !important;
-    background-color: #4e4e4e !important;
-    padding: 2vh 0 !important;
-    font-size: 12px !important;
-    display: flex !important;
-    justify-content: center !important;
+    color: #C6D3E7;
+    background-color: #4e4e4e;
+    padding: 2vh 0;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-full .footer-btns s {
-    color: #000000 !important;
+    color: #000000;
 }
-
-
 
 /* /////////////////////////////////////scroll to top/////////////////////////////////// */
 

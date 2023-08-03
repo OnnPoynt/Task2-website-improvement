@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+html {
+    /* overflow-x: hidden; */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -21,6 +25,7 @@ body {
     position: absolute;
     right: -50%;
     top: 0;
+    width: 500%;
 }
 
 .bg2 {
@@ -33,9 +38,6 @@ body {
     animation-duration: 5s;
 }
 
-h1 {
-    font-family: monospace;
-}
 
 @keyframes slide {
     0% {
@@ -65,7 +67,7 @@ h1 {
 .button-container {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 60%;
 }
 
 .logo-container {
@@ -95,33 +97,15 @@ h1 {
 }
 
 .header-button:hover {
-    background-color: #f0f0f0;
+    background-color: #3bb1ff;
+    transition: all .5s ease-in !important;
 }
 
 #header.navbar-scrolled {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Optional shadow effect when scrolled */
     transition: background-color 0.3s ease-in-out;
 }
-
-/* Media query for responsiveness (optional) */
-/* @media screen and (max-width: 768px) {
-    .logo {
-        font-size: 20px;
-    }
-
-    .menu button {
-        font-size: 14px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .contact-button {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-} */
 
 /* //////////////////TOP/////////////////// */
 #Top {
@@ -136,21 +120,16 @@ h1 {
     left: 10vw;
     top: 25vh;
     max-width: 40vw;
-    background-image: url('Assets/skytree-reverse1.jpeg');
-
 }
 
-.top_image1 {
+.top_image {
     position: absolute;
     z-index: -999;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: rgb(92, 176, 209);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 .front {
@@ -161,6 +140,27 @@ h1 {
     padding-top: 20vh;
 }
 
+/* ///////////////////////////heading text/////////////////////////// */
+
+.heading_text {
+    font-size: 100px;
+    font-weight: 1000;
+    color: #2e30a6d2;
+    text-decoration: underline;
+    position: relative;
+    left: 10%;
+}
+
+.tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+}
+
+.tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
 
 /* ////////////////////////////////////////WHO WE ARE///////////////////////////////////// */
 
@@ -171,7 +171,7 @@ h1 {
 
 .wwa {
     width: 66%;
-    height: 55vh;
+    height: 52vh;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
@@ -214,7 +214,8 @@ h1 {
 }
 
 .wwa_text p {
-    font-size: 48px;
+    font-size: 56px;
+    color: #ffffff;
 }
 
 .wwa_text span:nth-child(2) {
@@ -223,26 +224,6 @@ h1 {
 
 .wwa_text a {
     text-decoration: none;
-}
-
-.wwa_heading_text {
-    font-size: 100px;
-    font-weight: 1000;
-    color: #2e30a6d2;
-    text-decoration: underline;
-    position: relative;
-    left: 10%;
-}
-
-.tag {
-    opacity: 0;
-    transform: translate(0, 10vh);
-    transition: all 1s;
-}
-
-.tag.visible {
-    opacity: 1;
-    transform: translate(0, 0);
 }
 
 /* ////////////////////////////////////////UPDATES//////////////////////////////////////// */
@@ -280,7 +261,7 @@ h1 {
 }
 
 .col-1 {
-    float: left;
+    /* float: left; */
     transform: rotate(90deg);
     transform-origin: center;
     position: absolute;
@@ -427,7 +408,7 @@ hr {
     top: 0;
     right: 0;
     height: 100%;
-    z-index: 999;
+    z-index: 100;
 }
 
 .user-img img {
@@ -435,15 +416,14 @@ hr {
     border-radius: 10px;
     width: 320px;
     object-fit: cover;
-    z-index: 999;
 }
 
 .user-text {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur(4.5px);
+    /* backdrop-filter: blur(4.5px); */
+    /* -webkit-backdrop-filter: blur(4.5px); */
     width: 520px;
     height: 270px;
     position: absolute;
@@ -554,7 +534,7 @@ hr {
 }
 
 #contact:hover {
-    background-color: #0400ffcb;
+    background-color: #89a4cc;
 }
 
 .background-txt {
@@ -660,6 +640,10 @@ h5:hover {
     color: #000000;
 }
 
+.footer-mobile{
+    display: none;
+}
+
 /* /////////////////////////////////////scroll to top/////////////////////////////////// */
 
 #scrollToTop {
@@ -686,6 +670,17 @@ h5:hover {
     transform: translate(-50%, -50%);
 }
 
+/* //////////////////////////////coming soon/////////////////////////// */
+
+.coming_soon {
+    font-size: 80px;
+    font-weight: 900;
+    color: #2E31A6;
+    text-decoration: underline;
+    text-align: center;
+    margin: 40vh 0;
+}
+
 
 
 /* left to do:
@@ -695,13 +690,307 @@ kochira links
 optional:
 underline on button select
 
-landing image to the right
 timeline in landing
-coming soon page
+
 entire image our stories
 scrolling banner
 our services text
 IT and contact page background
 
-ask about about page
+change header and footer for everything
 */
+
+
+
+
+/* ////////////////////////media queries for every section//////////////////////// */
+
+
+/* ////////////////header///////////// */
+
+@media screen and (min-width: 800px) {
+
+    #mobileMenu {
+        display: none;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    #header {
+        max-width: 90vw;
+    }
+
+    .button-container {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .burger-menu .bar {
+        width: 30px;
+        height: 4px;
+        background-color: #000;
+        transition: 0.4s;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        position: absolute;
+        top: 80px;
+        /* Adjust the value as needed */
+        right: 20px;
+        /* Adjust the value as needed */
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .mobile-menu.open {
+        display: flex;
+    }
+
+    .mobile-menu .header-button {
+        margin: 5px 0;
+    }
+}
+
+/* /////////////////////top/////////////////////*/
+
+@media screen and (max-width: 768px) {
+
+    .front {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top_text {
+        font-size: 40px;
+        max-width: 90%;
+    }
+
+    .top_logo img {
+        width: 100vw;
+    }
+}
+
+
+/* ///////////////////////////heading text/////////////////////////// */
+
+@media screen and (max-width: 768px) {
+
+    .heading_text {
+        font-size: 3rem;
+    }
+
+}
+
+/* ////////////////////////////wwa//////////////////////////// */
+
+@media screen and (max-width: 768px) {
+
+    .wwa {
+        width: 90%;
+        height: 76vh;
+    }
+
+    .wwa_image {
+        top: 0;
+        position: relative;
+        width: 252px;
+        height: 336px;
+    }
+
+    .main_blue {
+        width: 100%;
+        height: 70%;
+        left: 0;
+        top: 30%;
+    }
+
+    .wwa_text {
+        width: 90%;
+        /* margin: 10px; */
+    }
+
+    .wwa_text p {
+        margin: 0px;
+    }
+
+    .wwa_text span {
+        font-size: 16px;
+    }
+
+    .wwa_text span:nth-child(2) {
+        position: relative;
+        top: -7%;
+        right: -64%;
+    }
+
+}
+
+
+/* ////////////////////////////updates//////////////////////////// */
+
+@media screen and (max-width: 768px) {
+
+    .carousel-main {
+        width: 90%;
+    }
+
+    .carousel-cell {
+        flex-direction: column-reverse;
+        overflow: scroll;
+    }
+
+    .carousel-cell:nth-child(2) span {
+        padding-bottom: 200px;
+        overflow-anchor: top;
+    }
+
+    .img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-cell span {
+        margin: 2%;
+    }
+
+    /* .flickity-viewport {
+} */
+
+}
+
+/* //////////////////////our stories////////////////// */
+
+@media screen and (max-width: 768px) {
+
+    .stories {
+        width: 100%;
+    }
+
+    .slide-col {
+        width: 100vw;
+        height: 60vh;
+        position: relative;
+    }
+
+    .user-text {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        /* -webkit-backdrop-filter: blur(4.5px); */
+        position: relative;
+        /* top: 50%; */
+        transform: translateY(-50%);
+        border-radius: 10px;
+        color: #4d4352;
+        padding: 35px;
+        margin: 0 auto;
+        z-index: 2;
+        width: auto;
+        height: auto;
+    }
+
+    .user-img {
+        /* position: relative; */
+        width: 100%;
+        z-index: 100;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .user-img img {
+        height: auto;
+        border-radius: 10px;
+        width: 320px;
+        object-fit: cover;
+    }    
+
+}
+
+/* //////////////////////////////FOOTER//////////////////////////////// */
+
+@media screen and (max-width: 768px) {
+    
+    .footer-full {
+        display:none;
+    }
+    
+
+    .footer-mobile{
+        display: block;
+        color: #fff;
+    }
+
+    .footer-top{
+
+    }
+
+    .footer-full .buttons{
+        display: flex;
+    }
+
+    .footer-mobile a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .footer_text {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    
+    .brand img {
+        width: 200px;
+    }
+    
+    .footerbtns {
+        text-decoration: none;
+        padding: 20px;
+    }
+    
+    .copyright {
+        color: #C6D3E7;
+        background-color: #4e4e4e;
+        padding: 2vh 0;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer-full .footer-btns s {
+        color: #000000;
+    }
+    
+
+    .footer-full .footer_info,
+    .footer-full .footer-btns {
+        display: flex;
+    }
+    
+}
