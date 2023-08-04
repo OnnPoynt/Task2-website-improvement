@@ -457,7 +457,7 @@ button:not(:disabled) {
 
 .container,
 .container-fluid {
-    --bs-gutter-x: 3vw;
+    --bs-gutter-x: 8vw;
     --bs-gutter-y: 0;
     width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
@@ -2530,6 +2530,10 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
     }
 }
 
+#top{
+    height: 100vh;
+}
+
 #footer {
     background-color: #2E31A6;
     font-family: 'Noto Sans JP', sans-serif !important;
@@ -2582,30 +2586,18 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
 
 /* /////////////////////////////////////scroll to top/////////////////////////////////// */
 
-#scrollToTop {
+.scroll {
+    width: 60px;
+    height: 60px;
     position: fixed;
-    bottom: 15px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
+    right: 5%;
+    bottom: 5%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #0091ff;
     border-radius: 50%;
-    background-color: #007bff;
-    display: none;
-    opacity: 0.7;
-    cursor: pointer;
 }
-
-#scrollToTop:before {
-    content: "\2191";
-    /* Unicode for the upward arrow */
-    font-size: 24px;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
 
 @media screen and (max-width: 768px) {
@@ -2618,8 +2610,9 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
     }
 
     .display-1 {
-        font-size: 2.6rem;
-        margin-top: 50% !important;
+        font-size: 2.5rem;
+        margin-top: 100% !important;
+        line-height: 130%;
     }
 
     .logo-img img {
@@ -2636,12 +2629,21 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
         padding-bottom: 6vh;
     }
 
+    .py-vh-4{
+        padding-top: 4vh;
+    }
+
     .py-vh-6{
-        padding-top: 11vh;
+        padding-top: 4vh;
     }
 
     #scrollToTop{
         display: none !important;
+    }
+
+    .border-end{
+        border-right: none !important;
+        border-bottom: #0091ff !important;
     }
     
 }
@@ -2652,3 +2654,10 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
     bottom: 5%;
     font-size: 30px;
 }
+
+
+/*
+
+navigate for our stories
+
+*/ 

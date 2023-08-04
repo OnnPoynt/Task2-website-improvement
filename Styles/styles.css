@@ -126,7 +126,7 @@ body {
     width: 1024px;
     height: 484px;
     position: absolute;
-    left: 130px;
+    left: 116px;
     top: 0px;
     border-radius: 30px;
 }
@@ -176,12 +176,17 @@ body {
     padding: 10vh 0;
     position: relative;
 }
+
 .container {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
 }
-.container::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+
+.container::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
 
 
@@ -316,19 +321,22 @@ hr {
     max-height: 100%;
     overflow: scroll;
     padding-bottom: 10px;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
 
 }
 
-.carousel-main .carousel-cell span::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */ 
+.carousel-main .carousel-cell span::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
+
 /* ////////////////////////////////OUR STORIES//////////////////////////////////// */
 
 #ourstories {
     position: relative;
-    margin: 0 0 30vh 0;
     background-image: radial-gradient(at 40% 20%, rgb(122, 217, 255) 0px, transparent 50%),
         radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
         radial-gradient(at 0% 50%, rgb(0, 162, 255) 0px, transparent 50%),
@@ -347,7 +355,7 @@ hr {
     text-align: center;
     font-size: 60px;
     color: #ffffff;
-    margin-bottom: 5rem;
+    margin-bottom: -3 rem;
     padding-top: 10vh;
 }
 
@@ -366,16 +374,16 @@ hr {
 
 .user-img {
     position: absolute;
-    top: 0;
+    top: 20%;
     right: 0;
     height: 100%;
     z-index: 100;
 }
 
 .user-img img {
-    height: 100%;
+    /* height: 100%; */
     border-radius: 10px;
-    width: 320px;
+    width: 420px;
     object-fit: cover;
 }
 
@@ -383,8 +391,6 @@ hr {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /* backdrop-filter: blur(4.5px); */
-    /* -webkit-backdrop-filter: blur(4.5px); */
     width: 520px;
     height: 270px;
     position: absolute;
@@ -416,18 +422,27 @@ hr {
 
 .indicator .btn {
     display: inline-block;
-    height: 15px;
-    width: 15px;
+    height: 27px;
+    width: 30px;
     margin: 4px;
     border-radius: 15px;
-    background: #000000;
+    background: #ffffff;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     margin-bottom: 2vh;
 }
 
 .btn.active {
-    width: 45px;
+    width: 81px;
+}
+
+.btn p {
+    width: 100%;
+    margin: auto 0;
+}
+
+.btn.active p {
+    display: none;
 }
 
 .testimonial {
@@ -467,17 +482,28 @@ hr {
     animation: slide 10s linear infinite;
 }
 
-.scrolling-image img {
-    height: 40% !important;
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-@keyframes slide {
+.banner-image {
+    /* Ensure the image is wider than the viewport to allow scrolling effect */
+    width: auto;
+    /* Adjust the height as needed */
+    height: auto;
+    /* Animation properties */
+    animation: scrollBanner 30s linear infinite;
+}
+
+@keyframes scrollBanner {
     0% {
-        transform: translate3d(0, 0, 0);
+        transform: translateX(0);
     }
 
     100% {
-        transform: translate3d(-2070px, 0, 0);
+        transform: translateX(-50%);
     }
 }
 
@@ -580,7 +606,7 @@ h5:hover {
 
 /* //////////////////////////////coming soon/////////////////////////// */
 
-#coming_soon{
+#coming_soon {
     background-color: #00dffc5e;
 
 }
@@ -635,7 +661,7 @@ change header and footer for everything
         width: 100vw;
     }
 
-    .top_image img{
+    .top_image img {
         width: auto;
     }
 
@@ -647,7 +673,7 @@ change header and footer for everything
         text-align: center;
         margin: 40vh 0;
     }
-    
+
 }
 
 
@@ -657,6 +683,7 @@ change header and footer for everything
 
     .heading_text {
         font-size: 3rem;
+        left: 3%;
     }
 
 }
@@ -717,6 +744,7 @@ change header and footer for everything
     .carousel-cell {
         flex-direction: column-reverse;
         overflow: scroll;
+        justify-content: flex-end;
     }
 
     .img img {
@@ -730,7 +758,9 @@ change header and footer for everything
     }
 
     .carousel-cell span {
-        margin: 2%;
+        margin: 2% 7%;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
 
     .col-1 {
@@ -748,6 +778,19 @@ change header and footer for everything
         align-items: center;
         transform: rotate(0deg);
         font-size: 18px;
+    }
+
+
+    .container {
+        -ms-overflow-style: block;
+        /* Internet Explorer 10+ */
+        scrollbar-width: block;
+        /* Firefox */
+    }
+
+    .container::-webkit-scrollbar {
+        display: block;
+        /* Safari and Chrome */
     }
 
 }
@@ -811,10 +854,20 @@ change header and footer for everything
         margin-top: 0;
     }
 
-    .user-text p{
+    .user-text p {
         width: auto;
     }
 
+}
+
+/* ///////////////////////////////banner/////////////////////// */
+
+@media only screen and (max-width: 768px) {
+
+    .banner-image {
+        height: auto;
+        width: auto;
+    }
 }
 
 /* ///////////////////////////contact//////////////////////// */
@@ -860,5 +913,7 @@ change header and footer for everything
     #scrollToTop {
         display: none !important;
     }
+
+
 
 }

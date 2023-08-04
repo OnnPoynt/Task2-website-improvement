@@ -115,4 +115,23 @@ $(document).on("scroll", function() {
 function toggleMenu() {
   const mobileMenu = document.getElementById('mobileMenu');
   mobileMenu.classList.toggle('open');
+
+  if (mobileMenu.classList.contains('open')) {
+    // Add event listener to close menu when clicking outside
+    document.addEventListener('click', closeMenuOnClickOutside);
+  } else {
+    // Remove event listener when the menu is closed
+    document.removeEventListener('click', closeMenuOnClickOutside);
+  }
+}
+
+function closeMenuOnClickOutside(event) {
+  const mobileMenu = document.getElementById('mobileMenu');
+  const burgerMenu = document.querySelector('.burger-menu');
+
+  if (!mobileMenu.contains(event.target) && !burgerMenu.contains(event.target)) {
+    // If the click is outside of the mobile menu and burger menu, close the mobile menu
+    mobileMenu.classList.remove('open');
+    document.removeEventListener('click', closeMenuOnClickOutside);
+  }
 }
