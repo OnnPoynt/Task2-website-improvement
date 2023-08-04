@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-html {
-    /* overflow-x: hidden; */
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -50,63 +46,6 @@ body {
 }
 
 
-#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-container img {
-    max-width: 10vw;
-}
-
-.header-button {
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.header-button a {
-    color: #000000;
-    text-decoration: none;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
-.header-button:hover {
-    background-color: #3bb1ff;
-    transition: all .5s ease-in !important;
-}
-
-#header.navbar-scrolled {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
-}
-
 /* //////////////////TOP/////////////////// */
 #Top {
     position: relative;
@@ -130,6 +69,11 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgb(92, 176, 209);
+}
+
+.top_image img {
+    height: 100vh;
+    width: 100%;
 }
 
 .front {
@@ -362,6 +306,8 @@ hr {
 
 .carousel-main .carousel-cell span {
     max-height: 100%;
+    overflow: scroll;
+    padding-bottom: 10px;
 }
 
 /* ////////////////////////////////OUR STORIES//////////////////////////////////// */
@@ -393,8 +339,9 @@ hr {
 
 .slide-row {
     display: flex;
-    width: 3200px;
+    width: 2720px;
     transition: 0.5s;
+    justify-content: space-between;
 }
 
 .slide-col {
@@ -439,6 +386,7 @@ hr {
 .user-text p {
     font-size: 18px;
     line-height: 24px;
+    width: 60%;
 }
 
 .user-text h2 {
@@ -542,7 +490,6 @@ hr {
     font-size: 16vw;
     font-stretch: condensed;
     font-weight: 200;
-    font-family: 'Anek Bangla', sans-serif;
     text-align: center;
     color: #0400ffcc;
     opacity: 4%;
@@ -562,9 +509,7 @@ h5 {
     color: #4e4e4e;
     font-size: 100px;
     /* font-size: 6.944444444444445vw; */
-    transform: scale(1, 0.8);
     font-weight: 500;
-    font-family: 'Anek Bangla', sans-serif;
     margin: 0;
 }
 
@@ -592,57 +537,6 @@ h5:hover {
 }
 
 /* /////////////////////////////////////FOOTER////////////////////////////////////////// */
-
-#footer {
-    background-color: #2E31A6;
-}
-
-.footer-full {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 10vw;
-    height: 20vh;
-    padding: 10vh 0;
-    color: #ffffff;
-}
-
-.footer-full a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer_text {
-    font-size: 40px;
-    font-weight: 700;
-}
-
-.brand img {
-    width: 200px;
-}
-
-.footerbtns {
-    text-decoration: none;
-    padding: 20px;
-}
-
-.copyright {
-    color: #C6D3E7;
-    background-color: #4e4e4e;
-    padding: 2vh 0;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-full .footer-btns s {
-    color: #000000;
-}
-
-.footer-mobile{
-    display: none;
-}
 
 /* /////////////////////////////////////scroll to top/////////////////////////////////// */
 
@@ -672,6 +566,11 @@ h5:hover {
 
 /* //////////////////////////////coming soon/////////////////////////// */
 
+#coming_soon{
+    background-color: #00dffc5e;
+
+}
+
 .coming_soon {
     font-size: 80px;
     font-weight: 900;
@@ -697,81 +596,12 @@ scrolling banner
 our services text
 IT and contact page background
 
+
+fit screen on landing page
 change header and footer for everything
 */
 
-
-
-
 /* ////////////////////////media queries for every section//////////////////////// */
-
-
-/* ////////////////header///////////// */
-
-@media screen and (min-width: 800px) {
-
-    #mobileMenu {
-        display: none;
-    }
-
-    .burger-menu {
-        display: none;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    html {
-        overflow-x: hidden;
-    }
-
-    #header {
-        max-width: 90vw;
-    }
-
-    .button-container {
-        display: none;
-    }
-
-    .burger-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-    }
-
-    .burger-menu .bar {
-        width: 30px;
-        height: 4px;
-        background-color: #000;
-        transition: 0.4s;
-    }
-
-    .mobile-menu {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #fff;
-        position: absolute;
-        top: 80px;
-        /* Adjust the value as needed */
-        right: 20px;
-        /* Adjust the value as needed */
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    .mobile-menu.open {
-        display: flex;
-    }
-
-    .mobile-menu .header-button {
-        margin: 5px 0;
-    }
-}
 
 /* /////////////////////top/////////////////////*/
 
@@ -790,6 +620,20 @@ change header and footer for everything
     .top_logo img {
         width: 100vw;
     }
+
+    .top_image img{
+        width: auto;
+    }
+
+    .coming_soon {
+        font-size: 60px;
+        font-weight: 900;
+        color: #2E31A6;
+        text-decoration: underline;
+        text-align: center;
+        margin: 40vh 0;
+    }
+    
 }
 
 
@@ -861,11 +705,6 @@ change header and footer for everything
         overflow: scroll;
     }
 
-    .carousel-cell:nth-child(2) span {
-        padding-bottom: 200px;
-        overflow-anchor: top;
-    }
-
     .img img {
         width: 100%;
         height: auto;
@@ -880,8 +719,22 @@ change header and footer for everything
         margin: 2%;
     }
 
-    /* .flickity-viewport {
-} */
+    .col-1 {
+        transform: rotate(270deg);
+        transform-origin: center;
+        position: absolute;
+        top: -42px;
+        left: 6%;
+    }
+
+    .carousel-nav .carousel-cell span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(0deg);
+        font-size: 18px;
+    }
 
 }
 
@@ -893,9 +746,16 @@ change header and footer for everything
         width: 100%;
     }
 
+    .slide-row {
+        display: flex;
+        width: 2720px;
+        transition: 0.5s;
+        justify-content: initial;
+    }
+
     .slide-col {
         width: 100vw;
-        height: 60vh;
+        height: 55vh;
         position: relative;
     }
 
@@ -905,15 +765,16 @@ change header and footer for everything
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         /* -webkit-backdrop-filter: blur(4.5px); */
         position: relative;
-        /* top: 50%; */
+        top: 57%;
         transform: translateY(-50%);
         border-radius: 10px;
         color: #4d4352;
-        padding: 35px;
-        margin: 0 auto;
+        padding: 25px;
+        margin: 25px;
         z-index: 2;
         width: auto;
         height: auto;
+        display: block;
     }
 
     .user-img {
@@ -929,68 +790,61 @@ change header and footer for everything
         border-radius: 10px;
         width: 320px;
         object-fit: cover;
-    }    
+        margin: 2%;
+    }
+
+    .indicator {
+        margin-top: 0;
+    }
+
+    .user-text p{
+        width: auto;
+    }
 
 }
 
-/* //////////////////////////////FOOTER//////////////////////////////// */
+/* ///////////////////////////contact//////////////////////// */
 
-@media screen and (max-width: 768px) {
-    
-    .footer-full {
-        display:none;
-    }
-    
-
-    .footer-mobile{
-        display: block;
-        color: #fff;
+@media only screen and (max-width: 768px) {
+    #contact {
+        height: 60vh;
+        z-index: 1;
     }
 
-    .footer-top{
-
-    }
-
-    .footer-full .buttons{
-        display: flex;
-    }
-
-    .footer-mobile a {
-        color: #ffffff;
+    #contact a {
         text-decoration: none;
     }
-    
-    .footer_text {
-        font-size: 40px;
-        font-weight: 700;
-    }
-    
-    .brand img {
-        width: 200px;
-    }
-    
-    .footerbtns {
-        text-decoration: none;
-        padding: 20px;
-    }
-    
-    .copyright {
-        color: #C6D3E7;
-        background-color: #4e4e4e;
-        padding: 2vh 0;
-        font-size: 12px;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .footer-full .footer-btns s {
-        color: #000000;
-    }
-    
 
-    .footer-full .footer_info,
-    .footer-full .footer-btns {
-        display: flex;
+    .background-txt {
+        display: none;
     }
-    
+
+    .contact-btn {
+        position: relative;
+        top: 15vh;
+        left: 0;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: 12.5vw;
+    }
+
+    .yes {
+        position: relative;
+        top: 40px;
+        left: 0px;
+        float: none;
+        width: 45vw;
+    }
+
+    .btn-under {
+        position: relative;
+        font-size: 5vw;
+    }
+
+    #scrollToTop {
+        display: none !important;
+    }
+
 }

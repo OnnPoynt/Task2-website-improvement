@@ -10,6 +10,9 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navScroll">
 
+  <div class="arrow_down">
+    <a href="#scroll">&#129047;</a>
+  </div>
   <main>
     <div class="w-100 overflow-hidden bg-gray-100" id="top">
 
@@ -64,7 +67,7 @@
             <span class="h5 fw-lighter" style="color: #2E31A6;">02.</span>
             <h3 class="py-5 border-top border-dark">稼働環境</h3>
             <p>
-              <li>クラウド (OCI)上で稼働する通販Ace仮想サーバを提供
+              <li>クラウド(OCI)上で稼働する通販Ace仮想サーバを提供
               </li>
               <li>.NET Framework アーキテクチャの採用
               </li>
@@ -123,12 +126,13 @@
             <img src="Assets/077.jpg" width="64" height="64" class="img-fluid rounded-circle me-3" alt=""
               data-aos="fade">
             <span><span class="fw-bold">中村 恒彦,</span>
-              エー・アール・システム株式会社 代表取締役社長</span>
+              エー・アール・システム株式会社 <br>　　　　　代表取締役社長</span>
           </blockquote>
         </div>
       </div>
     </div>
 
+    <section id="scroll"></section>
     <div class="py-vh-6 bg-blue-900 text-light w-100 overflow-hidden" id="workwithus">
       <div class="container">
         <div class="row d-flex justify-content-center">
@@ -138,10 +142,9 @@
               <h2 class="display-6 mb-5">通販業界をITの力で変革させる！AI時代まで見据えたIT会社！！</h2>
             </div>
             <div class="col-12">
-              <a href="contact.html" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">Contact us</a>
+              <a href="contact.html" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5" data-aos="fade-down">Contact us</a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -211,46 +214,7 @@
     </div>
   </main>
 
-
-
-
-
-
-
-  <section id="footer">
-    <div class="footer-full">
-      <div class="footer_text">
-        <p>
-          通販Aceが<br>
-          「あるからできる」<br>
-          施策がある。
-        </p>
-      </div>
-      <div class="footer_info">
-        <p><a href="contact.html">Contact us</a></p>
-        <p>東京都台東区上野7-12-13 協和ビル3階</p>
-        <p>〒110-0005</p>
-        <p>03-5811-1864</p>
-        <p>info@ar-system.co.jp</p>
-      </div>
-      <div class="footer-btns">
-        <p><a href="home.html">Home</a></p>
-        <p><a href="about.html">会社概要</a></p>
-        <p><a href="https://ace-ars.jp/">通販Aceについて</a></p>
-        <p><a href="coming_soon.html">coming soon</a></p>
-        <p><a href="ITpage.html">IT導入補助金</a></p>
-      </div>
-      <div class="footer-logo">
-        <a href="home.html" class="brand"><img src="Assets/ace_logo.png" alt=""></a>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <p>
-        © A R Systems. All rights reserved.
-      </p>
-    </div>
-  </section>
+  <section id="footer"></section>
 
   <div id="scrollToTop"></div>
 
@@ -278,6 +242,12 @@
 
       console.log(scrollpos)
     })
+  </script>
+  <script>
+                fetch('/footer.html')
+              .then(response => response.text())
+              .then(data => document.getElementById('footer').innerHTML = data);
+
   </script>
 
 </body>

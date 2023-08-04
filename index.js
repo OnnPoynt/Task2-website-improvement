@@ -83,14 +83,14 @@ btn[1].onclick = function () {
 // };
 
 
-function loopTopSlider(){
-  var sliderSize = $('.slide .logos img').width();
-  $('.slide .logos').css({'width':sliderSize*2+'px'});
-  $('.slide .logos').find('img').clone().appendTo('.slide .logos');  //appends 2 images
-};
-$(function(){
-  loopTopSlider();
-});
+// function loopTopSlider(){
+//   var sliderSize = $('.slide .logos img').width();
+//   $('.slide .logos').css({'width':sliderSize*2+'px'});
+//   $('.slide .logos').find('img').clone().appendTo('.slide .logos');  //appends 2 images
+// };
+// $(function(){
+//   loopTopSlider();
+// });
 
 
 

@@ -14,23 +14,7 @@
 
     <!-- nav menu -->
 
-    <header id="header">
-        <div class="button-container">
-            <button class="header-button"><a href="home.html">Home</a></button>
-            <button class="header-button"><a href="https://ace-ars.jp/  ">通販Aceについて</a></button>
-            <button class="header-button"><a href="about.html">会社概要</a></button>
-        </div>
-        <div class="logo-container">
-            <a href="home.html">
-                <img src="Assets\logo.png" alt="Logo">
-            </a>
-        </div>
-        <div class="button-container">
-            <button disabled class="header-button"><s>通販プロ</s></button>
-            <button class="header-button"><a href="ITpage.html">IT導入補助金</a></button>
-            <button class="header-button"><a href="contact.html">Contact</a></button>
-        </div>
-    </header>
+    <section id="header"></section>
 
 
     <div class="uptxt">
@@ -41,7 +25,7 @@
     </div>
 
     <div class="formbox">
-        <form id="myForm" data-netlify="true" action="thankyou.html" method="post">
+        <form id="myForm" data-netlify="true" method="post">
 
             <label for="name">*名前</label>
             <input type="text" id="name" name="firstname" placeholder="姓名" required>
@@ -64,40 +48,7 @@
     </div>
    
    
-    <section id="footer">
-        <div class="footer-full">
-          <div class="footer_text">
-            <p>
-              通販Aceが<br>
-              「あるからできる」<br>
-              施策がある。
-            </p>
-          </div>
-          <div class="footer_info">
-            <a href="contact.html">Contact us</a>
-            <p>東京都台東区上野7-12-13 協和ビル3階</p>
-            <p>〒110-0005</p>
-            <p>03-5811-1864</p>
-            <p>info@ar-system.co.jp</p>
-          </div>
-          <div class="footer-btns">
-            <p><a href="home.html">Home</a></p>
-            <p><a href="about.html">会社概要</a></p>
-            <p><a href="https://ace-ars.jp/">通販Aceについて</a></p>
-            <p><s>通販プロ</s></p>
-            <p><a href="ITpage.html">IT導入補助金</a></p>
-          </div>
-          <div class="footer-logo">
-            <a href="home.html" class="brand"><img src="Assets/ace_logo.png" alt=""></a>
-          </div>
-        </div>
-    
-        <div class="copyright">
-          <p>
-            © A R Systems. All rights reserved.
-          </p>
-        </div>
-      </section>
+    <section id="footer"></section>
 
       <div id="scrollToTop"></div>
 
@@ -106,6 +57,17 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/flickity-fade@2/flickity-fade.js"></script>
     <script src="index.js"></script>
+    <script>
+      // Load the header
+      fetch('/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+    
+      // Load the footer
+      fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 </body>
 
 </html>

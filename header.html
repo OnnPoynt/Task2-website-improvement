@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARS</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
+    <link rel="stylesheet" href="Styles\headfoot.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo-container">
+            <a href="home.html">
+                <img src="Assets\logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="button-container">
+            <button class="header-button"><a href="home.html">Home</a></button>
+            <button class="header-button"><a href="https://ace-ars.jp/">通販Aceについて</a></button>
+            <button class="header-button"><a href="about.html">会社概要</a></button>
+            <button class="header-button"><a href="coming_soon.html">ECサービス</a></button>
+            <button class="header-button"><a href="ITpage.html">IT導入補助金</a></button>
+            <button class="header-button"><a href="contact.html">Contact</a></button>
+        </div>
+
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">   
+            <!-- Place your mobile menu items here -->
+            <button class="header-button"><a href="home.html">Home</a></button>
+            <button class="header-button"><a href="https://ace-ars.jp/">通販Aceについて</a></button>
+            <button class="header-button"><a href="about.html">会社概要</a></button>
+            <button class="header-button"><a href="coming_soon.html">Coming soon</a></button>
+            <button class="header-button"><a href="ITpage.html">IT導入補助金</a></button>
+            <button class="header-button"><a href="contact.html">Contact</a></button>
+        </div>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@2/flickity-fade.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

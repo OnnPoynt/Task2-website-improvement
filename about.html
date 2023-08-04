@@ -11,23 +11,7 @@
 </head>
 
 <body>
-    <header id="header">
-        <div class="button-container">
-            <button class="header-button"><a href="home.html">Home</a></button>
-            <button class="header-button"><a href="https://ace-ars.jp/  ">通販Aceについて</a></button>
-            <button class="header-button"><a href="about.html">会社概要</a></button>
-        </div>
-        <div class="logo-container">
-            <a href="home.html">
-                <img src="Assets\logo.png" alt="Logo">
-            </a>
-        </div>
-        <div class="button-container">
-            <button disabled class="header-button"><s>通販プロ</s></button>
-            <button class="header-button"><a href="ITpage.html">IT導入補助金</a></button>
-            <button class="header-button"><a href="contact.html">Contact</a></button>
-        </div>
-    </header>
+    <section id="header"></section>
 
     <section id="about_top">
         <div class="top_image">
@@ -46,7 +30,7 @@
         <div id="maps">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.4242359292957!2d139.7776646118886!3d35.71578372795997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e9bca0851bb%3A0x4f8cde226789b67b!2zSmFwYW4sIOOAkjExMC0wMDA1IFRva3lvLCBUYWl0byBDaXR5LCBVZW5vLCA3LWNoxY1tZeKIkjEy4oiSMTMg5Y2U5ZKM44OT44Or!5e0!3m2!1sen!2sin!4v1690440384049!5m2!1sen!2sin"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="info_main">
@@ -99,6 +83,7 @@
             </table>
         </div>
     </section>
+
     <section id="qualities">
         <div class="text">
             <div class="block">
@@ -151,12 +136,11 @@
         <h1>Our services</h1>
         <div class="card">
             <div class="card-img"></div>
-            <h3>通販Pro</h3>
+            <h3>ECサービス</h3>
             <p>
-                Explore the myriad of trails through the mountainous. Choose the
-                difficulty appropriate to your fitness level.
+                Coming soon
             </p>
-            <a href="#">Learn more</a>
+            <a href="coming_soon.html">Learn more</a>
         </div>
         <div class="card">
             <div class="card-img"></div>
@@ -165,14 +149,16 @@
                 通販AceはEC・通販専用の基幹システムです。 顧客、広告、受注、商品、定期、物流、カスタマーセンター・ 様々な場所やツールに散らばるデータを一元管理することで、
                 「より精緻なマーケティング施策」と「オペレーション原価の削減施策」を実現するシステムです。
             </p>
-            <a href="#">Learn more</a>
+            <a href="https://ace-ars.jp/">Learn more</a>
         </div>
         <div class="card">
             <div class="card-img"></div>
-            <h3>ECサイト開発</h3>
+            <h3>インフラ管理</h3>
             <p>
-                ご要望に応じたECサイトの設計・開発を行います。 </p>
-            <a href="#">Learn more</a>
+                <!-- 要件に応じてインフラストラクチャを開発および保守します -->
+            Coming soon
+            </p>
+            <a href="coming_soon.html">Learn more</a>
         </div>
     </section>
 
@@ -194,41 +180,7 @@
         </a>
     </section>
 
-
-    <section id="footer">
-        <div class="footer-full">
-          <div class="footer_text">
-            <p>
-              通販Aceが<br>
-              「あるからできる」<br>
-              施策がある。
-            </p>
-          </div>
-          <div class="footer_info">
-            <a href="contact.html">Contact us</a>
-            <p>東京都台東区上野7-12-13 協和ビル3階</p>
-            <p>〒110-0005</p>
-            <p>03-5811-1864</p>
-            <p>info@ar-system.co.jp</p>
-          </div>
-          <div class="footer-btns">
-            <p><a href="home.html">Home</a></p>
-            <p><a href="about.html">会社概要</a></p>
-            <p><a href="https://ace-ars.jp/">通販Aceについて</a></p>
-            <p><s>通販プロ</s></p>
-            <p><a href="ITpage.html">IT導入補助金</a></p>
-          </div>
-          <div class="footer-logo">
-            <a href="home.html" class="brand"><img src="Assets/ace_logo.png" alt=""></a>
-          </div>
-        </div>
-    
-        <div class="copyright">
-          <p>
-            © A R Systems. All rights reserved.
-          </p>
-        </div>
-      </section>
+    <section id="footer"></section>
     
     <div id="scrollToTop"></div>
 
@@ -237,6 +189,17 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/flickity-fade@2/flickity-fade.js"></script>
     <script src="index.js"></script>
+    <script>
+        // Load the header
+        fetch('/header.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('header').innerHTML = data);
+      
+        // Load the footer
+        fetch('/footer.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('footer').innerHTML = data);
+      </script>
 </body>
 
 </html>

@@ -4,92 +4,18 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
+    background-color: #00dffc5e;
 }
 
-#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-container img {
-    max-width: 10vw;
-}
-
-.header-button {
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.header-button a {
-    color: #000000;
-    text-decoration: none;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
-.header-button:hover {
-    background-color: #f0f0f0;
-}
-
-#header.navbar-scrolled {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Optional shadow effect when scrolled */
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* Media query for responsiveness (optional) */
-/* @media screen and (max-width: 768px) {
-    .logo {
-        font-size: 20px;
-    }
-
-    .menu button {
-        font-size: 14px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .contact-button {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-} */
 
 .uptxt {
     position: relative;
-    margin: 0px 0px 0px 8.4%;
+    margin: 210px 0px 0px 8.4%;
 }
 
 .contact {
     font-weight: 300;
     font-size: 6.944444444444445vw;
-    font-family: 'Anek Bangla', sans-serif;
     margin: 11.363636363636363vh 0px 0px 0px;
 }
 
@@ -103,7 +29,6 @@ body {
 
 .tel {
     position: relative;
-    font-family: 'Anek Bangla', sans-serif;
     font-size: 2.8402366863905324vh;
     font-weight: 300;
     font-stretch: normal;
@@ -161,7 +86,7 @@ input[type=submit] {
     border: none;
     cursor: pointer;
     width: 60%;
-    margin: 10% 0%;
+    margin: 10% 20%;
 }
 
 input[type=submit]:hover {
@@ -175,52 +100,6 @@ input[type=submit]:hover {
 
 /* /////////////FOOTER///////////// */
 
-#footer {
-    background-color: #2E31A6;
-}
-
-.footer-full {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 10vw;
-    height: 20vh;
-    padding: 10vh 0;
-    color: #ffffff;
-}
-
-.footer-full a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer_text {
-    font-size: 40px;
-    font-weight: 700;
-}
-
-.brand img {
-    width: 200px;
-}
-
-.footerbtns {
-    text-decoration: none;
-    padding: 20px;
-}
-
-.copyright {
-    color: #C6D3E7;
-    background-color: #4e4e4e;
-    padding: 2vh 0;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-full .footer-btns s {
-    color: #000000;
-}
 
 /* /////////////////////////////////////scroll to top/////////////////////////////////// */
 
@@ -253,3 +132,27 @@ some background
 header and footer clean
 button size reduce
 */
+
+@media screen and (max-width: 768px) {
+
+    .uptxt{
+        margin: 0px 8.4%;
+    }
+    .contact{
+        font-size: 80px;
+    }
+
+    .under-txt{
+        font-size: 16px;
+    }
+
+    .tel span {
+        font-size: 16px;
+    }
+
+    input[type=submit]{
+        width: 100%;
+        padding: 6% 1%;
+        margin: 10% 0 40% 0;
+    }
+}

@@ -7,80 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    transition: background-color 0.3s ease-in-out;
-}
 
-.button-container {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-container img {
-    max-width: 10vw;
-}
-
-.header-button {
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.header-button a {
-    color: #000000;
-    text-decoration: none;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
-.header-button:hover {
-    background-color: #f0f0f0;
-}
-
-#header.navbar-scrolled {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Optional shadow effect when scrolled */
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* Media query for responsiveness (optional) */
-/* @media screen and (max-width: 768px) {
-    .logo {
-        font-size: 20px;
-    }
-
-    .menu button {
-        font-size: 14px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .contact-button {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-} */
 
 .top_image {
     position: absolute;
@@ -145,6 +72,16 @@ tr :nth-child(1) {
     padding-right: 4%;
 }
 
+#maps {
+    width: 600px;
+    height: 450px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
 /* //////////////////////QUALITIES////////////////////// */
 
 #qualities {
@@ -152,9 +89,10 @@ tr :nth-child(1) {
     background-color: #e5e5f7;
     height: 70vh;
 
+    background-color: #e5e5f7;
     opacity: 0.8;
-    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
-    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+    background-size: 20px 20px;
+    background-image: repeating-linear-gradient(0deg, #000dff, #000dff 1px, #e5e5f7 1px, #e5e5f7);
 }
 
 .text {
@@ -266,7 +204,7 @@ h3 {
 
 .card {
     display: flex;
-    max-width: 320px;
+    width: 320px;
     max-height: 58vh;
     min-height: 50vh;
     flex-direction: column;
@@ -288,22 +226,21 @@ h3 {
 }
 
 .card:nth-of-type(1) .card-img {
-    background-image: url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1606&q=80);
+    background-image: url('/Assets/AdobeStock_422691710.jpg');
 }
 
 .card:nth-of-type(2) .card-img {
-    background-image: url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1606&q=80);
+    background-image: url('/Assets/6850209_28124.jpg');
 }
 
 .card:nth-of-type(3) .card-img {
-    background-image: url(https://images.unsplash.com/photo-1628746404106-4d3843b231b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F2aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
+    background-image: url('/Assets/img01.jpg');
 }
 
 .parallax-container2 h1 {
     position: absolute;
     top: 10%;
-    color: #4e4e4e;
-    background-color: rgb(255, 255, 255, 0.7);
+    color: #ffffff;
     border-radius: 40px;
     font-size: 80px;
     font-weight: 800;
@@ -319,7 +256,7 @@ h3 {
 }
 
 #contact:hover {
-    background-color: #609efc;
+    background-color: #89a4cc;
 }
 
 .background-txt {
@@ -327,7 +264,6 @@ h3 {
     font-size: 16vw;
     font-stretch: condensed;
     font-weight: 200;
-    font-family: 'Anek Bangla', sans-serif;
     text-align: center;
     color: #0400ffcc;
     opacity: 4%;
@@ -347,9 +283,7 @@ h5 {
     color: #4e4e4e;
     font-size: 100px;
     /* font-size: 6.944444444444445vw; */
-    transform: scale(1, 0.8);
     font-weight: 500;
-    font-family: 'Anek Bangla', sans-serif;
     margin: 0;
 }
 
@@ -374,55 +308,6 @@ h5:hover {
     font-weight: 400;
     opacity: 0.6;
     font-size: 1.1111111111111112vw;
-}
-
-/* ///////////////////FOOTER////////////////// */
-
-#footer {
-    background-color: #2E31A6;
-}
-
-.footer-full {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 10vw;
-    height: 20vh;
-    padding: 10vh 0;
-    color: #ffffff;
-}
-
-.footer-full a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer_text {
-    font-size: 40px;
-    font-weight: 700;
-}
-
-.brand img {
-    width: 200px;
-}
-
-.footerbtns {
-    text-decoration: none;
-    padding: 20px;
-}
-
-.copyright {
-    color: #C6D3E7;
-    background-color: #4e4e4e;
-    padding: 2vh 0;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-full .footer-btns s {
-    color: #000000;
 }
 
 /* /////////////////////////////////////scroll to top/////////////////////////////////// */
@@ -459,3 +344,169 @@ cards will have our services i think 2 for now. will ask tomorrow for new
 header and footer update
 company goals and mission text revamp
 */
+
+
+@media only screen and (max-width: 768px) {
+    #contact {
+        height: 60vh;
+        z-index: 1;
+    }
+
+    #contact a {
+        text-decoration: none;
+    }
+
+    .background-txt {
+        display: none;
+    }
+
+    .contact-btn {
+        position: relative;
+        top: 15vh;
+        left: 0;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: 12.5vw;
+    }
+
+    .yes {
+        position: relative;
+        top: 40px;
+        left: 0px;
+        float: none;
+        width: 45vw;
+    }
+
+    .btn-under {
+        position: relative;
+        font-size: 5vw;
+    }
+
+    #scrollToTop {
+        display: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    #contact {
+        height: 60vh;
+        z-index: 1;
+    }
+
+    #contact a {
+        text-decoration: none;
+    }
+
+    .background-txt {
+        display: none;
+    }
+
+    .contact-btn {
+        position: relative;
+        top: 15vh;
+        left: 0;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: 12.5vw;
+    }
+
+    .yes {
+        position: relative;
+        top: 40px;
+        left: 0px;
+        float: none;
+        width: 45vw;
+    }
+
+    .btn-under {
+        position: relative;
+        font-size: 5vw;
+    }
+
+    #scrollToTop {
+        display: none !important;
+    }
+
+}
+
+/* ////////////////TOP/////////////// */
+
+@media only screen and (max-width: 768px) {
+    .top_image {
+        /* position: relative; */
+        z-index: -999;
+        /* width: 100vw; */
+        /* height: 100vh; */
+        display: flex;
+        justify-content: center;
+    }
+
+    .top_image1 {
+        position: relative;
+        width: auto;
+        height: auto;
+        top: 0;
+    }
+
+    .about_txt {
+        font-size: 80px;
+        padding-top: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    #main_info {
+        padding-bottom: 10vh;
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    #maps {
+        margin: 10px;
+        width: 95vw;
+        height: 50vh
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .info_main {
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    #qualities {
+        height: 110vh;
+    }
+
+    .parallax-container {
+        min-height: 110vh;
+    }
+
+    .memo h2 {
+        font-size: 23px;
+    }
+}
+
+
+/* /////////////////cards//////////////// */
+
+@media only screen and (max-width: 768px) {
+    .parallax-container2 {
+        padding: 15rem 0 5rem 0;
+    }
+
+    .parallax-container2 h1 {
+        top: 0;
+    }
+}
