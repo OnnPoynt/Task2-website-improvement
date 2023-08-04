@@ -176,6 +176,14 @@ body {
     padding: 10vh 0;
     position: relative;
 }
+.container {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
 
 .row {
     position: relative;
@@ -308,8 +316,14 @@ hr {
     max-height: 100%;
     overflow: scroll;
     padding-bottom: 10px;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+
 }
 
+.carousel-main .carousel-cell span::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */ 
+}
 /* ////////////////////////////////OUR STORIES//////////////////////////////////// */
 
 #ourstories {
