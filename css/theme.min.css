@@ -10,6 +10,10 @@ html {
     overflow-x: hidden;
 }
 
+ul{
+    list-style-position: outside;
+}
+
 :root {
     --bs-blue: #1717e5;
     --bs-indigo: #6610f2;
@@ -466,6 +470,10 @@ button:not(:disabled) {
     margin-left: auto;
 }
 
+.container {
+    max-width: 95vw !important;
+}
+
 @media (min-width:576px) {
     .container {
         max-width: 540px
@@ -611,7 +619,8 @@ button:not(:disabled) {
 
     .col-md-3 {
         flex: 0 0 auto;
-        width: 25%
+        width: 15%;
+        margin-left: 10%;
     }
 
     .col-md-4 {
@@ -681,7 +690,7 @@ button:not(:disabled) {
 
     .col-lg-8 {
         flex: 0 0 auto;
-        width: 66.66667%
+        width: 50%
     }
 
     .col-lg-10 {
@@ -2148,7 +2157,7 @@ img {
 }
 
 .py-vh-6 {
-    padding-top: 16vh;
+    padding-top: 24vh;
     padding-bottom: 16vh
 }
 
@@ -2530,7 +2539,7 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
     }
 }
 
-#top{
+#top {
     height: 100vh;
 }
 
@@ -2587,16 +2596,19 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
 /* /////////////////////////////////////scroll to top/////////////////////////////////// */
 
 .scroll {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     position: fixed;
     right: 5%;
     bottom: 5%;
     font-size: 40px;
     display: flex;
     justify-content: center;
-    background-color: #0091ff;
+    background-color: #0091ff70;
     border-radius: 50%;
+    align-items: center;
+    color: #000000dc;
+    z-index: 999;
 }
 
 
@@ -2610,7 +2622,7 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
     }
 
     .display-1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         margin-top: 100% !important;
         line-height: 130%;
     }
@@ -2624,44 +2636,55 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
         padding-bottom: 1rem !important;
     }
 
-    .py-vh-5{
+    .py-vh-5 {
         padding-top: 6vh;
         padding-bottom: 6vh;
     }
 
-    .py-vh-4{
+    .py-vh-4 {
         padding-top: 4vh;
     }
 
-    .py-vh-6{
-        padding-top: 4vh;
+    .py-vh-6 {
+        padding-top: 8vh;
+        padding-bottom: 13vh;
     }
 
-    #scrollToTop{
-        display: none !important;
+    .fw-bold {
+        font-weight: 900 !important;
     }
 
-    .border-end{
-        border-right: none !important;
-        border-bottom: #0091ff !important;
+    .scroll {
+        height: 40px;
+        width: 40px;
+        font-size: 30px;
     }
-    
+
 }
 
-.arrow_down{
-    position: fixed;
-    right: 5%;
-    bottom: 5%;
-    font-size: 30px;
+@media screen and (max-width: 768px) {
+    .py-vh-6 {
+        padding-top: 0vh;
+        padding-bottom: 13vh;
+    }
+
+    .display-1 {
+        font-size: 2.2rem;
+        margin-top: 100% !important;
+        line-height: 130%;
+    }
+
 }
+
+
 
 
 /*
 
-landing page img equal
+landing page img equal up and down
 border lines change 
 arrow opacity
-message spage reduce
+message space reduce
 contact button spacing
 
 
@@ -2689,4 +2712,4 @@ contact bg
 thankyou page
 
 Xampp for php
-*/ 
+*/
