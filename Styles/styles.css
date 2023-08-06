@@ -90,14 +90,13 @@ body {
     font-size: 100px;
     font-weight: 1000;
     color: #2e30a6d2;
-    text-decoration: underline;
     position: relative;
     left: 10%;
 }
 
 .tag {
-    opacity: 0;
-    transform: translate(0, 10vh);
+    /* opacity: 0; */
+    /* transform: translate(0, 10vh); */
     transition: all 1s;
 }
 
@@ -118,27 +117,24 @@ body {
     height: 52vh;
     position: relative;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 .main_blue {
     background-color: rgba(137.00000703334808, 204.00000303983688, 255, 1);
-    width: 1024px;
+    width: 100%;
     height: 484px;
     position: absolute;
-    left: 116px;
     top: 0px;
     border-radius: 30px;
 }
 
 .wwa_image {
     background-color: rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-    width: 299px;
-    height: 432px;
+    width: 338px;
+    height: 483px;
     position: absolute;
     left: 0px;
-    top: 26px;
-    border-radius: 47px;
+    border-radius: 27px;
     overflow: hidden;
 }
 
@@ -149,12 +145,14 @@ body {
 
 .wwa_text {
     position: relative;
-    width: 40%;
+    width: 50%;
     height: 100%;
     margin: 0 auto;
     color: rgba(0, 0, 0, 1);
     text-align: left;
     font-size: 26px;
+    left: 9%;
+    top: 10%;
 }
 
 .wwa_text p {
@@ -229,7 +227,6 @@ body {
     width: 100%;
     height: 100%;
     font-size: 16px;
-    text-shadow: 8px 8px 10px #0000008c;
 }
 
 .carousel-main .flickity-button {
@@ -335,7 +332,7 @@ hr {
 
 /* ////////////////////////////////OUR STORIES//////////////////////////////////// */
 
-#ourstories {
+/* #ourstories {
     position: relative;
     background-image: radial-gradient(at 40% 20%, rgb(122, 217, 255) 0px, transparent 50%),
         radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
@@ -381,7 +378,6 @@ hr {
 }
 
 .user-img img {
-    /* height: 100%; */
     border-radius: 10px;
     width: 420px;
     object-fit: cover;
@@ -462,6 +458,129 @@ hr {
 .learn_more a {
     text-decoration: none;
     color: #ffffff;
+} */
+
+#ourstories {
+    height: 600px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    padding-top: 10vh;
+    background-image: radial-gradient(at 40% 20%, rgb(122, 217, 255) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, rgb(0, 162, 255) 0px, transparent 50%),
+        radial-gradient(at 80% 50%, rgb(0, 247, 255) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgb(17, 0, 255) 0px, transparent 50%),
+        radial-gradient(at 80% 100%, rgb(55, 0, 255) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, rgb(0, 37, 248) 0px, transparent 50%);
+}
+
+#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 2;
+    --position: 1;
+}
+
+div.item {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    background-color: coral;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-15deg * var(--r))) translateX(calc(-450px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+    border-radius: 10px;
+}
+
+div.item:nth-of-type(1) {
+    --offset: 1;
+    background-color: #90f1ef;
+}
+
+div.item:nth-of-type(2) {
+    --offset: 2;
+    background-color: #ff70a6;
+}
+
+input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+input:nth-of-type(1):checked~div#carousel {
+    --position: 1;
+}
+
+input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+input:nth-of-type(2):checked~div#carousel {
+    --position: 2;
+}
+
+.image_carousel img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carouselbutton {
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    background: #0099ff;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border: none;
+}
+
+.carouselbutton:hover {
+    background: #4cbaff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.carousel_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+@media screen and (max-width: 768px) {
+    div.item {
+        position: absolute;
+        width: 340px;
+        height: 450px;
+        background-color: coral;
+        --r: calc(var(--position) - var(--offset));
+        --abs: max(calc(var(--r) * -1), var(--r));
+        transition: all 0.25s linear;
+        transform: rotateY(calc(-15deg * var(--r))) translateX(calc(-360px * var(--r)));
+        z-index: calc((var(--position) - var(--abs)));
+        border-radius: 10px;
+    }
+
 }
 
 /* ///////////////////////////////////OUR CUSTOMERS///////////////////////////////// */
@@ -653,7 +772,7 @@ change header and footer for everything
     }
 
     .top_text {
-        font-size: 40px;
+        font-size: 2.4rem;
         max-width: 90%;
     }
 
@@ -676,6 +795,15 @@ change header and footer for everything
 
 }
 
+@media only screen and (max-width: 380px) {
+    .top_text {
+        font-size: 2.3rem;
+    }
+
+    .wwa{
+        padding-bottom: 42%;
+    }
+}
 
 /* ///////////////////////////heading text/////////////////////////// */
 
@@ -702,6 +830,7 @@ change header and footer for everything
         position: relative;
         width: 252px;
         height: 336px;
+        margin: 0 auto;
     }
 
     .main_blue {
@@ -714,6 +843,8 @@ change header and footer for everything
     .wwa_text {
         width: 90%;
         /* margin: 10px; */
+        top: 0;
+        left: 0;
     }
 
     .wwa_text p {
@@ -737,13 +868,18 @@ change header and footer for everything
 
 @media screen and (max-width: 768px) {
 
+    #updates {
+        padding: 20vh 0 10vh 0;
+    }
+
     .carousel-main {
         width: 90%;
+        overflow: hidden;
     }
 
     .carousel-cell {
         flex-direction: column-reverse;
-        overflow: scroll;
+        /* overflow: scroll; */
         justify-content: flex-end;
     }
 
@@ -758,7 +894,7 @@ change header and footer for everything
     }
 
     .carousel-cell span {
-        margin: 2% 7%;
+        margin: 2% 5%;
         overflow-x: hidden;
         overflow-y: scroll;
     }
@@ -767,8 +903,8 @@ change header and footer for everything
         transform: rotate(270deg);
         transform-origin: center;
         position: absolute;
-        top: -42px;
-        left: 6%;
+        top: -64px;
+        left: 4%;
     }
 
     .carousel-nav .carousel-cell span {
@@ -795,7 +931,7 @@ change header and footer for everything
 
 }
 
-/* //////////////////////our stories////////////////// */
+/* //////////////////////our stories///////////////////// */
 
 @media screen and (max-width: 768px) {
 
@@ -864,8 +1000,16 @@ change header and footer for everything
 
 @media only screen and (max-width: 768px) {
 
+    .banner-container {
+        height: 29vh;
+    }
+
+    .banner-images {
+        height: 100%;
+    }
+
     .banner-image {
-        height: auto;
+        height: 100%;
         width: auto;
     }
 }

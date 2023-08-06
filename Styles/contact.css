@@ -4,7 +4,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
-    background-color: #00dffc5e;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%238e8e8e' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 
@@ -14,7 +15,7 @@ body {
 }
 
 .contact {
-    font-weight: 300;
+    font-weight: 600;
     font-size: 6.944444444444445vw;
     margin: 11.363636363636363vh 0px 0px 0px;
 }
@@ -60,6 +61,8 @@ label {
 }
 
 input[type=text],
+input[type=email],
+input[type=number],
 select,
 textarea {
     font-size: 1.893491124260355vh;
@@ -135,14 +138,15 @@ button size reduce
 
 @media screen and (max-width: 768px) {
 
-    .uptxt{
+    .uptxt {
         margin: 0px 8.4%;
     }
-    .contact{
+
+    .contact {
         font-size: 80px;
     }
 
-    .under-txt{
+    .under-txt {
         font-size: 16px;
     }
 
@@ -150,7 +154,7 @@ button size reduce
         font-size: 16px;
     }
 
-    input[type=submit]{
+    input[type=submit] {
         width: 100%;
         padding: 6% 1%;
         margin: 10% 0 40% 0;

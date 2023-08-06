@@ -110,7 +110,7 @@ iframe {
     margin: 0 auto;
     padding: 1% 10%;
     font-weight: 500;
-    text-shadow: 8px 8px 10px #0000008c;
+    /* text-shadow: 8px 8px 10px #0000008c; */
 }
 
 .text span p:nth-child(1) {
@@ -156,7 +156,7 @@ iframe {
 
 .buffer {
     width: 100%;
-    min-height: 30vh;
+    min-height: 15vh;
     background-color: var(--color);
 }
 
@@ -164,7 +164,7 @@ iframe {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 6rem 0;
-    background-image: url(https://images.unsplash.com/photo-1585424536945-26663ea69d52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80);
+    background-image: url('/Assets/fuji_blue.jpg');
     gap: 1.6em;
     position: relative;
 }
@@ -471,6 +471,7 @@ h5:hover {
 
     .info_main {
         width: auto;
+        margin: 4%;
     }
 
 }
