@@ -119,12 +119,17 @@ table {
     font-weight: bold;
 }
 
+.table__cell--yellow{
+    background-color: #fcfab39c;
+    font-weight: bold;
+}
+
 .col-10 {
     width: 10%;
 }
 
 .col-20 {
-    width: 20%;
+    width: 27%;
 }
 
 table {
@@ -139,7 +144,7 @@ td {
 
 td,
 th {
-    width: 150px;
+    width: 500px;
     height: 30px;
     padding: 8px 8px;
     font-size: 14px;
@@ -445,15 +450,24 @@ table.GeneratedTable {
     border-color: #000000;
     border-style: solid;
     color: #000000;
-  }
-  
-  table.GeneratedTable td, table.GeneratedTable th {
+}
+
+table.GeneratedTable td,
+table.GeneratedTable th {
     border-width: 1px;
     border-color: #000000;
     border-style: solid;
     padding: 3px;
-  }
-  
-  table.GeneratedTable thead {
+}
+
+table.GeneratedTable thead {
     background-color: #fede86;
-  }
+}
+
+.image{
+    margin-top: 0;
+}
+
+.img2{
+
+}
