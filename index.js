@@ -135,3 +135,5 @@ function closeMenuOnClickOutside(event) {
     document.removeEventListener('click', closeMenuOnClickOutside);
   }
 }
+
+
