@@ -276,6 +276,11 @@ hr {
     height: 300px;
 }
 
+.imagelarge img {
+    width: 200px;
+    /* height: 30%; */
+}
+
 .carousel-nav .carousel-cell:before {
     transform: rotate(-90deg);
 }
@@ -498,7 +503,7 @@ div.item {
     position: absolute;
     width: 350px;
     height: 450px;
-    background-color: coral;
+    /* background-color: coral; */
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
@@ -509,12 +514,12 @@ div.item {
 
 div.item:nth-of-type(1) {
     --offset: 1;
-    background-color: #90f1ef;
+    background-color: #ffffff5e;
 }
 
 div.item:nth-of-type(2) {
     --offset: 2;
-    background-color: #ff70a6;
+    background-color: #ffffff5e;
 }
 
 input:nth-of-type(1) {
@@ -800,7 +805,7 @@ change header and footer for everything
         font-size: 2.3rem;
     }
 
-    .wwa{
+    .wwa {
         padding-bottom: 42%;
     }
 }
@@ -897,6 +902,10 @@ change header and footer for everything
         margin: 2% 5%;
         overflow-x: hidden;
         overflow-y: scroll;
+    }
+
+    .carousel-main .carousel-cell:nth-child(4)  {
+        justify-content: center;
     }
 
     .col-1 {

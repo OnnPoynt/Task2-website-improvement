@@ -10,7 +10,7 @@ html {
     overflow-x: hidden;
 }
 
-ul{
+ul {
     list-style-position: outside;
 }
 
@@ -1428,7 +1428,8 @@ button:not(:disabled) {
 }
 
 .border-bottom {
-    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important
+    /* border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important; */
+    border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
 .border-start {
@@ -2664,14 +2665,19 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
 
 @media screen and (max-width: 768px) {
     .py-vh-6 {
-        padding-top: 0vh;
-        padding-bottom: 13vh;
+        padding-top: 10vh;
+        padding-bottom: 5vh;
     }
 
     .display-1 {
         font-size: 2.2rem;
         margin-top: 100% !important;
         line-height: 130%;
+    }
+
+    .border-bottom {
+        border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        border-right: none !important;
     }
 
 }
@@ -2684,11 +2690,7 @@ figma design
 
 banner clipping
 
-services image grey
-
 navigate for our stories
-
-thankyou page
 
 Xampp for php
 */
