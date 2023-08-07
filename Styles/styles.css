@@ -627,7 +627,7 @@ input:nth-of-type(2):checked~div#carousel {
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -747,22 +747,10 @@ h5:hover {
 
 
 /* left to do:
-toppu
-kochira links
-
 optional:
 underline on button select
 
 timeline in landing
-
-entire image our stories
-scrolling banner
-our services text
-IT and contact page background
-
-
-fit screen on landing page
-change header and footer for everything
 */
 
 /* ////////////////////////media queries for every section//////////////////////// */
