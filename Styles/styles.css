@@ -277,7 +277,7 @@ hr {
 }
 
 .imagelarge img {
-    width: 200px;
+    width: 600px;
     /* height: 30%; */
 }
 
@@ -925,6 +925,10 @@ timeline in landing
         display: block;
         /* Safari and Chrome */
     }
+
+    .imagelarge img {
+        width: 100%;
+    }    
 
 }
 

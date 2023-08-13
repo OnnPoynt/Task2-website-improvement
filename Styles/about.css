@@ -234,7 +234,7 @@ h3 {
 }
 
 .card:nth-of-type(3) .card-img {
-    background-image: url('/Assets/img01.jpg');
+    background-image: url('/Assets/Enterprise-architecture.png');
 }
 
 .parallax-container2 h1 {
@@ -446,7 +446,6 @@ h5:hover {
 
     .about_txt {
         font-size: 80px;
-        padding-top: 40%;
     }
 
 }
@@ -461,7 +460,8 @@ h5:hover {
     #maps {
         margin: 10px;
         width: 95vw;
-        height: 50vh
+        height: 50vh;
+        border: 1px solid;
     }
 
     iframe {
