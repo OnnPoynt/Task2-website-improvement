@@ -97,11 +97,6 @@ input[type=submit]:hover {
     background-color: #161616;
 }
 
-.checkbox {
-    width: 0.78125vw;
-    height: 0.78125vw;
-}
-
 /* /////////////FOOTER///////////// */
 
 
@@ -161,3 +156,14 @@ button size reduce
         margin: 10% 0 40% 0;
     }
 }
+
+.error-message{
+    color: red;
+    font-size: 10px;
+}
+
+.error-message{
+    color: red;
+    font-size: 10px;
+}
+

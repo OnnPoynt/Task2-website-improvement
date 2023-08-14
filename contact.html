@@ -2,86 +2,111 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
-    <link rel="stylesheet" href="Styles\contact.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
+  <link rel="stylesheet" href="Styles\contact.css">
 </head>
 
 <body>
 
-    <!-- nav menu -->
+  <!-- nav menu -->
 
-    <section id="header"></section>
+  <section id="header"></section>
 
 
-    <div class="uptxt">
-        <p class="contact">Contact</p>
-        <p class="under-txt">お仕事のご相談、ご依頼に関することなど <br>
-            フォームまたは電話からお気軽にお問い合わせください。</p>
-        <p class="tel"><span>TEL</span> <br> 03-5811-1864 </p>
-    </div>
+  <div class="uptxt">
+    <p class="contact">Contact</p>
+    <p class="under-txt">お仕事のご相談、ご依頼に関することなど <br>
+      フォームまたは電話からお気軽にお問い合わせください。</p>
+    <p class="tel"><span>TEL</span> <br> 03-5811-1864 </p>
+  </div>
 
-    <div class="formbox">
-        <form id="myForm" data-netlify="true" method="post">
+  <div class="formbox">
+    <form id="myForm" method="post" onsubmit="redirectToThankYouPage()">
 
-            <label for="name"><span class="required">*</span>名前</label>
-            <input type="text" id="name" name="firstname" placeholder="姓名" required>
+      <label for="name"><span class="required">*</span>名前</label>
+      <input type="text" id="name" name="firstname" placeholder="姓名" required>
 
-            <label for="company-name">会社名</label>
-            <input type="text" id="company" name="company-name" placeholder="株式会社ARS">
+      <label for="company-name">会社名</label>
+      <input type="text" id="company" name="company-name" placeholder="株式会社ARS">
 
-            <label for="email"><span class="required">*</span>メールアドレス</label>
-            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+      <label for="email"><span class="required">*</span>メールアドレス</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+      <span id="emailError" class="error-message"></span>
+      <br>
+      <label for="phone"><span class="required">*</span>電話番号</label>
+      <input type="tel" id="phone" name="phone" placeholder="000-1111-2222" required>
+      <span id="phoneError" class="error-message"></span>
+      <br>
+      <label for="subject"><span class="required">*</span>お問い合わせ内容</label>
+      <textarea id="message" name="message" placeholder="ここにお問い合わせ内容を記入"></textarea>
 
-            <label for="phone"><span class="required">*</span>電話番号</label>
-            <input type="number" id="phone" name="phone" placeholder="000-1111-2222" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
-            
-            <label for="subject"><span class="required">*</span>お問い合わせ内容</label>
-            <textarea id="message" name="message" placeholder="ここにお問い合わせ内容を記入"></textarea>
+      <input class="submitbutton" type="submit" value="送信する" required>
 
-            <input class="submitbutton" type="submit" value="送信する" required>
+    </form>
+  </div>
 
-        </form>
-    </div>
-   
-   
-    <section id="footer"></section>
 
-      <div id="scrollToTop"></div>
+  <section id="footer"></section>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/flickity-fade@2/flickity-fade.js"></script>
-    <script src="index.js"></script>
-    <script>
-      // Load the header
-      fetch('/header.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('header').innerHTML = data);
-    
-      // Load the footer
-      fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
-    </script>
-    <script>
-        const phoneInput = document.getElementById('phone');
-        const maxLength = 11; // Maximum length of the phone number (including dashes)
-      
-        phoneInput.addEventListener('input', (event) => {
-          const input = event.target;
-          const inputValue = input.value.replace(/-/g, ''); // Remove dashes from the input
-      
-          if (inputValue.length > maxLength) {
-            input.value = inputValue.slice(0, maxLength);
-          }
-        });
-      </script>
-      
+  <div id="scrollToTop"></div>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/flickity-fade@2/flickity-fade.js"></script>
+  <script src="index.js"></script>
+  <script>
+    // Load the header
+    fetch('/header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+
+    // Load the footer
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+  <script>
+    const emailInput = document.getElementById("email");
+    const emailError = document.getElementById("emailError");
+    const phoneInput = document.getElementById("phone");
+    const phoneError = document.getElementById("phoneError");
+
+    emailInput.addEventListener("input", validateEmail);
+    phoneInput.addEventListener("input", validatePhone);
+
+    function validateEmail() {
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      if (emailPattern.test(emailInput.value)) {
+        emailError.textContent = "";
+      } else {
+        emailError.textContent = "Please enter a valid email address.";
+      }
+    }
+
+    function validatePhone() {
+      const phoneNumber = phoneInput.value.replace(/\D/g, "");
+      if (phoneNumber.length > 11) {
+        phoneInput.value = phoneNumber.substring(0, 11);
+      }
+      if (/^\d{11}$/.test(phoneNumber)) {
+        phoneError.textContent = "";
+      } else {
+        phoneError.textContent = "Please enter a valid 11-digit phone number.";
+      }
+    }
+
+    function redirectToThankYouPage() {
+      // Perform any necessary form validation before redirection
+      // If everything is valid, redirect to the thankyou.html page
+      window.location.href = "/thankyou.html";
+    }
+  </script>
+
 </body>
 
 </html>

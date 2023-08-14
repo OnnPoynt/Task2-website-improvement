@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -89,21 +89,21 @@
             <div class="block">
                 <span>
                     <p>
-                        Laughter to Members <i>社員に笑顔を</i></p>
+                        Laughter to Members <br> <i>社員に笑顔を</i></p>
                     <p>
                         私たちのシステムは、お客様の笑顔のためにあります。 <br>そしてお客様に喜んでいただける製品を提供するために、 まず私たちが笑顔で業務に当たることを大切にしています。
                     </p>
                 </span>
                 <span>
                     <p>
-                        Impression to Client <i>顧客に満足を</i></p>
+                        Impression to Client <br> <i>顧客に満足を</i></p>
                     <p>
                         お客様のご要望にお応えするだけの会社ではありません。 <br>お客様の業務を徹底的に理解し、 最適なソリューションを先回りでご提案します。
                     </p>
                 </span>
                 <span>
                     <p>
-                        Value to Society <i>社会に価値を</i></p>
+                        Value to Society <br> <i>社会に価値を</i></p>
                     <p>
                         私たちのパーパスは、「日本のものづくりを元気にする」ことです。 <br>煩雑な業務を私たちがシステムを通じて全て請け負うことで、 ものづくりに携わる全ての人を応援します。
                     </p>
@@ -112,7 +112,7 @@
         </div>
     </section>
 
-    <section class="parallax-container">
+    <section class="parallax-container parallax-container1">
         <div class="memo">
             <h1>代表メッセージ</h1>
             <h2>「通販基幹システムを通じて、<br>
@@ -156,7 +156,7 @@
             <h3>インフラ管理</h3>
             <p>
                 <!-- 要件に応じてインフラストラクチャを開発および保守します -->
-            Coming soon
+                Coming soon
             </p>
             <a href="coming_soon.html">Learn more</a>
         </div>
@@ -181,7 +181,7 @@
     </section>
 
     <section id="footer"></section>
-    
+
     <div id="scrollToTop"></div>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
@@ -192,14 +192,14 @@
     <script>
         // Load the header
         fetch('/header.html')
-          .then(response => response.text())
-          .then(data => document.getElementById('header').innerHTML = data);
-      
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
         // Load the footer
         fetch('/footer.html')
-          .then(response => response.text())
-          .then(data => document.getElementById('footer').innerHTML = data);
-      </script>
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 </body>
 
 </html>
