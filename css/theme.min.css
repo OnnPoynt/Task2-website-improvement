@@ -2158,8 +2158,8 @@ img {
 }
 
 .py-vh-6 {
-    padding-top: 24vh;
-    padding-bottom: 16vh
+    padding-top: 15vh;
+    padding-bottom: 12vh
 }
 
 .px-vw-5 {
@@ -2665,10 +2665,20 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
 
 @media screen and (max-width: 768px) {
     .py-vh-6 {
-        padding-top: 10vh;
-        padding-bottom: 5vh;
+        padding-top: 7vh;
+        padding-bottom: 2vh;
     }
 
+    .col-lg-4{
+        padding-top: 2vh !important;
+    }
+
+    .border-top {
+        border-top: none !important;
+        border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        border-color: #000000 !important;
+    }
+    
     .display-1 {
         font-size: 2.2rem;
         margin-top: 100% !important;
@@ -2680,18 +2690,52 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
         border-right: none !important;
     }
 
+    .mb-5{
+        margin-bottom: 0 !important;
+    }
+
+
+}
+
+
+@media screen and (max-height: 700px) {
+
+    .display-1{
+        margin-top: 75% !important;
+    }
+
 }
 
 
 
 
 /*
+add data
+
+landing page padding for index screen  -----------  done
+
+data div padding index screen -----------  done
+
+shachou message line on the bottom -----------  done
+
+contact button padding -----------  done
+
+
+
+scroll bar for updates
+
+
+small padding after tables
+
+
+iphone se about us fixes
+
 
 figma design
 
 navigate for our stories
 
-video padding
-
 our stories scroll
+
+submit action thank you page
 */

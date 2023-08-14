@@ -175,18 +175,22 @@ body {
     position: relative;
 }
 
-.container {
-    -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
-    scrollbar-width: none;
-    /* Firefox */
-}
+@media screen and (min-width: 900px) {
 
-.container::-webkit-scrollbar {
-    display: none;
-    /* Safari and Chrome */
-}
+    .carousel-main .carousel-cell span {
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
+        scrollbar-width: none;
+        /* Firefox */
 
+    }
+
+    .carousel-main .carousel-cell span::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+}
 
 .row {
     position: relative;
@@ -321,150 +325,10 @@ hr {
 
 .carousel-main .carousel-cell span {
     max-height: 100%;
-    overflow: scroll;
     padding-bottom: 10px;
-    -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
-    scrollbar-width: none;
-    /* Firefox */
-
-}
-
-.carousel-main .carousel-cell span::-webkit-scrollbar {
-    display: none;
-    /* Safari and Chrome */
 }
 
 /* ////////////////////////////////OUR STORIES//////////////////////////////////// */
-
-/* #ourstories {
-    position: relative;
-    background-image: radial-gradient(at 40% 20%, rgb(122, 217, 255) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, rgb(0, 162, 255) 0px, transparent 50%),
-        radial-gradient(at 80% 50%, rgb(0, 247, 255) 0px, transparent 50%),
-        radial-gradient(at 0% 100%, rgb(17, 0, 255) 0px, transparent 50%),
-        radial-gradient(at 80% 100%, rgb(55, 0, 255) 0px, transparent 50%),
-        radial-gradient(at 0% 0%, rgb(0, 37, 248) 0px, transparent 50%);
-}
-
-.stories {
-    width: 800px;
-    margin: 0 auto;
-}
-
-.stories h1 {
-    text-align: center;
-    font-size: 60px;
-    color: #ffffff;
-    margin-bottom: -3 rem;
-    padding-top: 10vh;
-}
-
-.slide-row {
-    display: flex;
-    width: 2720px;
-    transition: 0.5s;
-    justify-content: space-between;
-}
-
-.slide-col {
-    width: 800px;
-    height: 400px;
-    position: relative;
-}
-
-.user-img {
-    position: absolute;
-    top: 20%;
-    right: 0;
-    height: 100%;
-    z-index: 100;
-}
-
-.user-img img {
-    border-radius: 10px;
-    width: 420px;
-    object-fit: cover;
-}
-
-.user-text {
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    width: 520px;
-    height: 270px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 10px;
-    color: #4d4352;
-    padding: 45px;
-    z-index: 2;
-}
-
-.user-text p {
-    font-size: 18px;
-    line-height: 24px;
-    width: 60%;
-}
-
-.user-text h2 {
-    margin: 35px 0 5px;
-    color: #4d4352;
-}
-
-.indicator {
-    display: flex;
-    justify-content: center;
-    margin-top: 4rem;
-}
-
-.indicator .btn {
-    display: inline-block;
-    height: 27px;
-    width: 30px;
-    margin: 4px;
-    border-radius: 15px;
-    background: #ffffff;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    margin-bottom: 2vh;
-}
-
-.btn.active {
-    width: 81px;
-}
-
-.btn p {
-    width: 100%;
-    margin: auto 0;
-}
-
-.btn.active p {
-    display: none;
-}
-
-.testimonial {
-    width: 100%;
-    overflow: hidden;
-}
-
-.learn_more {
-    background-color: #27BCE6 !important;
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-.learn_more a {
-    text-decoration: none;
-    color: #ffffff;
-} */
-
 #ourstories {
     height: 600px;
     margin: 0;
@@ -503,7 +367,6 @@ div.item {
     position: absolute;
     width: 350px;
     height: 450px;
-    /* background-color: coral; */
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
@@ -613,11 +476,8 @@ input:nth-of-type(2):checked~div#carousel {
 }
 
 .banner-image {
-    /* Ensure the image is wider than the viewport to allow scrolling effect */
     width: auto;
-    /* Adjust the height as needed */
     height: auto;
-    /* Animation properties */
     animation: scrollBanner 30s linear infinite;
 }
 
@@ -672,7 +532,6 @@ input:nth-of-type(2):checked~div#carousel {
 h5 {
     color: #4e4e4e;
     font-size: 100px;
-    /* font-size: 6.944444444444445vw; */
     font-weight: 500;
     margin: 0;
 }
@@ -743,15 +602,6 @@ h5:hover {
     text-align: center;
     margin: 40vh 0;
 }
-
-
-
-/* left to do:
-optional:
-underline on button select
-
-timeline in landing
-*/
 
 /* ////////////////////////media queries for every section//////////////////////// */
 
@@ -887,12 +737,11 @@ timeline in landing
     }
 
     .carousel-cell span {
-        margin: 2% 5%;
+        margin: 2% 3% 2% 5%;
         overflow-x: hidden;
-        overflow-y: scroll;
     }
 
-    .carousel-main .carousel-cell:nth-child(4)  {
+    .carousel-main .carousel-cell:nth-child(4) {
         justify-content: center;
     }
 
@@ -911,13 +760,14 @@ timeline in landing
         align-items: center;
         transform: rotate(0deg);
         font-size: 18px;
+        overflow-x: hidden !important;
     }
 
 
     .container {
-        -ms-overflow-style: block;
+        -ms-overflow-style: block !important;
         /* Internet Explorer 10+ */
-        scrollbar-width: block;
+        scrollbar-width: block !important;
         /* Firefox */
     }
 
@@ -928,7 +778,22 @@ timeline in landing
 
     .imagelarge img {
         width: 100%;
-    }    
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar {
+        width: 1px;
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #000000;
+    }
+
 
 }
 
