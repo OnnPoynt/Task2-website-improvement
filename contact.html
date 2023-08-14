@@ -25,7 +25,7 @@
   </div>
 
   <div class="formbox">
-    <form id="myForm" method="post" onsubmit="redirectToThankYouPage()">
+    <form id="myForm" action="/thankyou.html" method="post">
 
       <label for="name"><span class="required">*</span>名前</label>
       <input type="text" id="name" name="firstname" placeholder="姓名" required>
@@ -100,11 +100,6 @@
       }
     }
 
-    function redirectToThankYouPage() {
-      // Perform any necessary form validation before redirection
-      // If everything is valid, redirect to the thankyou.html page
-      window.location.href = "/thankyou.html";
-    }
   </script>
 
 </body>

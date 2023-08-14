@@ -109,38 +109,3 @@ function closeMenuOnClickOutside(event) {
 }
 
 
-
-const emailInput = document.getElementById("email");
-const emailError = document.getElementById("emailError");
-const phoneInput = document.getElementById("phone");
-const phoneError = document.getElementById("phoneError");
-
-emailInput.addEventListener("input", validateEmail);
-phoneInput.addEventListener("input", validatePhone);
-
-function validateEmail() {
-  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  if (emailPattern.test(emailInput.value)) {
-    emailError.textContent = "";
-  } else {
-    emailError.textContent = "Please enter a valid email address.";
-  }
-}
-
-function validatePhone() {
-  const phoneNumber = phoneInput.value.replace(/\D/g, "");
-  if (phoneNumber.length > 11) {
-    phoneInput.value = phoneNumber.substring(0, 11);
-  }
-  if (/^\d{11}$/.test(phoneNumber)) {
-    phoneError.textContent = "";
-  } else {
-    phoneError.textContent = "Please enter a valid 11-digit phone number.";
-  }
-}
-
-function redirectToThankYouPage() {
-  // Perform any necessary form validation before redirection
-  // If everything is valid, redirect to the thankyou.html page
-  window.location.href = "/thankyou.html";
-}
