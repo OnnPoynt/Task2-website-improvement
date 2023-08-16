@@ -176,7 +176,7 @@ iframe {
 
 .parallax-container p {
     max-width: 52ch;
-    padding: 1em;
+    padding: 1em 1em 2em 1em;
     line-height: 1.5;
     font-weight: 600;
     margin: 0;
