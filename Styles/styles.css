@@ -278,11 +278,17 @@ hr {
 .img img {
     width: 100%;
     height: 300px;
+    border: 1px #000000 solid;
+}
+
+.image img {
+    border: 1px #000000 solid;
 }
 
 .imagelarge img {
     width: 600px;
     /* height: 30%; */
+    border: 1px #000000 solid;
 }
 
 .carousel-nav .carousel-cell:before {
@@ -729,11 +735,17 @@ h5:hover {
     .img img {
         width: 100%;
         height: auto;
+        border-style: none;
     }
 
     .image img {
         width: 100%;
         height: auto;
+        border: none;
+    }
+
+    .imagelarge img {
+        border: none;
     }
 
     .carousel-cell span {
@@ -923,7 +935,5 @@ h5:hover {
     #scrollToTop {
         display: none !important;
     }
-
-
 
 }

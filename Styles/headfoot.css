@@ -345,10 +345,14 @@ body {
     .footer_bottom {
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .brand img {
         width: 120px;
     }
+}
+
+@media only screen and (max-height: 700px) {
+    
 }

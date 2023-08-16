@@ -12,7 +12,7 @@
 
 
   <a href="#footer">
-    <div class="scroll">&#129047;</div>
+    <div class="scroll" id="scrollButton">&#129047;</div>
   </a>
 
   <main>
@@ -21,7 +21,6 @@
       <div class="container position-relative">
         <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left"
           style="background-image: url(Assets/37199750.svg);">
-
         </div>
         <div class="row">
 
@@ -219,7 +218,6 @@
 
   <section id="footer"></section>
 
-  <div id="scrollToTop"></div>
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/aos.js"></script>
@@ -230,21 +228,27 @@
   </script>
 
   <script>
-    let scrollpos = window.scrollY
-    const header = document.querySelector(".navbar")
-    const header_height = header.offsetHeight
+    document.addEventListener('DOMContentLoaded', function () {
+      const scrollButton = document.getElementById('scrollButton');
+      const footer = document.getElementById('footer');
 
-    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+      function checkScroll() {
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const footerPosition = footer.offsetTop - window.innerHeight;
 
-    window.addEventListener('scroll', function () {
-      scrollpos = window.scrollY;
+        if (scrollPosition >= footerPosition) {
+          scrollButton.style.display = 'none';
+        } else {
+          scrollButton.style.display = 'flex';
+        }
+      }
 
-      if (scrollpos >= header_height) { add_class_on_scroll() }
-      else { remove_class_on_scroll() }
+      // Initial check when the page loads
+      checkScroll();
 
-      console.log(scrollpos)
-    })
+      // Check on scroll
+      window.addEventListener('scroll', checkScroll);
+    });
   </script>
   <script>
     fetch('/footer.html')
