@@ -29,7 +29,7 @@ window.addEventListener('scroll', function() {
     var scrollToTopBtn = document.getElementById('scrollToTop');
 
     // Show and enable the button when the user scrolls down by 30px
-    if (window.scrollY >= 30) {
+    if (window.scrollY >= 10) {
       scrollToTopBtn.style.display = 'block';
       scrollToTopBtn.disabled = false;
     } else {

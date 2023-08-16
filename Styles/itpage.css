@@ -22,8 +22,8 @@ h2 {
 /* /////////////////////////////START//////////////////////////////// */
 #one {
     position: relative;
-    margin-top: 9vh;
-    padding-top: 14vh;
+    /* margin-top: 9vh; */
+    padding-top: 23vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -254,8 +254,9 @@ th {
     position: absolute;
     top: 35%;
     left: 35.95833333333333vw;
-    z-index: 999;
-}
+    z-index: 10;
+  }
+  
 
 h5 {
     color: #4e4e4e;
@@ -443,32 +444,20 @@ footer font padding and size.
 
     h2 {
         font-size: 30px;
+        margin-bottom: 10%;
+    }
+
+    #mobile h3 {
+        font-size: 18px;
+    }
+
+    #first{
+        padding-top: 10%;
     }
 }
 
-
-table.GeneratedTable {
-    width: 100%;
-    background-color: #ffffff;
-    border-collapse: collapse;
-    border-width: 1px;
-    border-color: #000000;
-    border-style: solid;
-    color: #000000;
-}
-
-table.GeneratedTable td,
-table.GeneratedTable th {
-    border-width: 1px;
-    border-color: #000000;
-    border-style: solid;
-    padding: 3px;
-}
-
-table.GeneratedTable thead {
-    background-color: #fede86;
-}
-
-.image{
-    margin-top: 0;
+@media only screen and (max-height: 700px) {
+    #mobile h3 {
+        font-size: 17px;
+    }
 }

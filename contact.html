@@ -25,7 +25,7 @@
   </div>
 
   <div class="formbox">
-    <form id="myForm" data-netlify="true" action="/thankyou.html" method="post">
+    <form id="myForm" data-netlify="true" action="/thankyou.html" method="get">
 
       <label for="name"><span class="required">*</span>名前</label>
       <input type="text" id="name" name="firstname" placeholder="姓名" required>
@@ -33,13 +33,13 @@
       <label for="company-name">会社名</label>
       <input type="text" id="company" name="company-name" placeholder="株式会社ARS">
 
-      <label for="email"><span class="required">*</span>メールアドレス</label>
+      <label for="email"><span class="required">*</span>メールアドレス<span id="emailError" class="error-message"></span></label>
       <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-      <span id="emailError" class="error-message"></span>
+      <!-- <span id="emailError" class="error-message"></span> -->
       <br>
-      <label for="phone"><span class="required">*</span>電話番号</label>
+      <label for="phone"><span class="required">*</span>電話番号<span id="phoneError" class="error-message"></span></label>
       <input type="tel" id="phone" name="phone" placeholder="000-1111-2222" required>
-      <span id="phoneError" class="error-message"></span>
+      <!-- <span id="phoneError" class="error-message"></span> -->
       <br>
       <label for="subject"><span class="required">*</span>お問い合わせ内容</label>
       <textarea id="message" name="message" placeholder="ここにお問い合わせ内容を記入"></textarea>
@@ -70,37 +70,46 @@
       .then(response => response.text())
       .then(data => document.getElementById('footer').innerHTML = data);
   </script>
-  <script>
-    const emailInput = document.getElementById("email");
-    const emailError = document.getElementById("emailError");
-    const phoneInput = document.getElementById("phone");
-    const phoneError = document.getElementById("phoneError");
+<script>
+  const emailInput = document.getElementById("email");
+  const emailError = document.getElementById("emailError");
+  const phoneInput = document.getElementById("phone");
+  const phoneError = document.getElementById("phoneError");
 
-    emailInput.addEventListener("input", validateEmail);
-    phoneInput.addEventListener("input", validatePhone);
+  emailInput.addEventListener("input", validateEmail);
+  phoneInput.addEventListener("input", validatePhone);
 
-    function validateEmail() {
-      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      if (emailPattern.test(emailInput.value)) {
-        emailError.textContent = "";
-      } else {
-        emailError.textContent = "Please enter a valid email address.";
-      }
+  function validateEmail() {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (emailPattern.test(emailInput.value)) {
+      emailError.textContent = "";
+    } else {
+      emailError.textContent = "Please enter a valid email address.";
+    }
+  }
+
+  function validatePhone() {
+    const phoneNumber = phoneInput.value.replace(/\D/g, ""); // Remove non-digit characters
+
+    if (phoneNumber.length > 11) {
+      phoneInput.value = phoneNumber.substring(0, 11);
     }
 
-    function validatePhone() {
-      const phoneNumber = phoneInput.value.replace(/\D/g, "");
-      if (phoneNumber.length > 11) {
-        phoneInput.value = phoneNumber.substring(0, 11);
-      }
-      if (/^\d{11}$/.test(phoneNumber)) {
-        phoneError.textContent = "";
-      } else {
-        phoneError.textContent = "Please enter a valid 11-digit phone number.";
-      }
+    if (phoneNumber.length >= 11) {
+      phoneError.textContent = "";
+    } else {
+      phoneError.textContent = "Please enter a valid 11-digit phone number.";
     }
+  }
 
-  </script>
+  // Disable alphabet input in the phone field
+  phoneInput.addEventListener("keydown", function (e) {
+    if (!/[0-9-]/.test(e.key) && !['Backspace', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+      e.preventDefault();
+    }
+  });
+
+</script>
 
 </body>
 

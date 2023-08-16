@@ -273,7 +273,7 @@ h3 {
     position: absolute;
     top: 35%;
     left: 35.95833333333333vw;
-    z-index: 999;
+    z-index: 10;
 }
 
 h5 {
@@ -479,8 +479,8 @@ h5:hover {
     }
 
     .text span p:nth-child(1) {
-        font-size:40px;
-    }    
+        font-size: 40px;
+    }
 
 
     .parallax-container {
@@ -511,7 +511,7 @@ h5:hover {
         font-size: 36px;
     }
 
-    .parallax-container1 h1{
+    .parallax-container1 h1 {
         font-size: 2.8rem;
     }
 
@@ -519,7 +519,7 @@ h5:hover {
         min-height: 160vh;
     }
 
-    .memo h2{
+    .memo h2 {
         font-size: 22px;
     }
 
