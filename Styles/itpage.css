@@ -84,12 +84,24 @@ h2 {
 }
 
 #two h2 {
-    margin-top: 2%;
+    margin-top: 14%;
+}
+
+#two .right p:nth-child(3){
+    padding-top: 14%;
 }
 
 .source {
     text-align: right;
     font-size: 16px;
+}
+
+.tables_left{
+    margin-top: 10%;
+}
+
+.bottom_table{
+    margin-bottom: 10%;
 }
 
 table {
@@ -138,7 +150,7 @@ table {
 }
 
 table {
-    margin-top: 10%;
+    /* margin-top: 10%; */
     border-collapse: collapse;
 }
 
