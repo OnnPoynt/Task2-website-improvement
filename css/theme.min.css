@@ -1427,6 +1427,11 @@ button:not(:disabled) {
     border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important
 }
 
+.logo-text{
+    border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    border-color: #000000 !important;
+}
+
 .border-bottom {
     /* border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important; */
     border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
@@ -2673,6 +2678,12 @@ body[data-aos-delay="3000"] [data-aos].aos-animate {
         padding-top: 2vh !important;
     }
 
+    .logo-text{
+        border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        border-color: #000000 !important;
+        border-bottom: none !important;
+    }
+
     .border-top {
         border-top: none !important;
         border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
@@ -2740,7 +2751,7 @@ footer justify flex start ------------ done
 
 on click move to thank you ------------ done
 
-border for under logo text
+border for under logo text ------------ done
 
 CSS slide for our stories
 
