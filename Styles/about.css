@@ -40,7 +40,6 @@ body {
     margin-top: 20vh;
     display: flex;
     justify-content: space-around;
-    padding: 0 0 10vh 0;
 }
 
 .image_main {
@@ -82,9 +81,9 @@ iframe {
 /* //////////////////////QUALITIES////////////////////// */
 
 #qualities {
-    margin: 5vh 0 25vh 0;
+    margin: 20vh 0 25vh 0;
     background-color: #e5e5f7;
-    height: 70vh;
+    height: 86vh;
 
     background-color: #e5e5f7;
     opacity: 0.8;
@@ -155,7 +154,7 @@ iframe {
 
 .buffer {
     width: 100%;
-    min-height: 15vh;
+    min-height: 25vh;
     background-color: var(--color);
 }
 
@@ -205,10 +204,10 @@ h3 {
     display: flex;
     width: 320px;
     /* max-height: 58vh; */
-    min-height: 50vh;
+    /* min-height: 50vh; */
     flex-direction: column;
     align-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     border-radius: 0.5em;
     background-color: white;
     box-shadow: 0 29px 38px -15px rgb(0 0 0 / 43%);
@@ -449,16 +448,16 @@ h5:hover {
 
 @media only screen and (max-width: 768px) {
     #main_info {
-        padding-bottom: 10vh;
+        /* padding-bottom: 10vh; */
         width: 100vw;
         flex-direction: column;
     }
 
     #maps {
-        margin: 10px;
+        margin: auto;
         width: 95vw;
         height: 50vh;
-        border: 1px solid;
+        /* border: 1px solid; */
     }
 
     iframe {
@@ -471,11 +470,23 @@ h5:hover {
         margin: 4%;
     }
 
+    tr :nth-child(1) {
+        text-align: left;
+        padding-right: 4%;
+    }
+
+    td {
+        text-align: left;
+        padding: 8px 3px;
+        vertical-align: top;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
     #qualities {
-        height: 110vh;
+        height: auto;
+        margin: 20vh 0;
     }
 
     .text span p:nth-child(1) {
@@ -523,4 +534,19 @@ h5:hover {
         font-size: 22px;
     }
 
+}
+
+@media only screen and (max-width: 364px) {
+
+    .parallax-container {
+        min-height: 130vh;
+    }
+
+    .memo h1{
+        font-size: 2.5rem;
+    }
+
+    .memo h2{
+        font-size: 21px;
+    }
 }

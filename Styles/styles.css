@@ -393,6 +393,8 @@ div.item {
   transform: rotateY(calc(-15deg * var(--r))) translateX(calc(-450px * var(--r)));
   z-index: calc((var(--position) - var(--abs)));
   border-radius: 10px;
+  cursor: grab;
+  user-select: none;
 }
 
 div.item:nth-of-type(1) {

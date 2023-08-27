@@ -32,6 +32,10 @@ body {
     font-size: 1.5em;
 }
 
+.up3{
+    padding: 0px 8.4%;
+}
+
 .tel {
     position: relative;
     font-size: 2.2222222222222223vw;
@@ -58,12 +62,12 @@ body {
     .up1 {
         font-size: 12.5vw;
         font-weight: 500;
-        padding: 0 20%;
+        padding: 10%;
         line-height: 100%;
     }
 
     .up2 {
-        padding: 4%; 
+        padding: 4%;
     }
 
     .tel {
@@ -76,7 +80,7 @@ body {
         text-align: left;
         font-size: 4.0625vw;
         top: -2.1875vw;
-        left: 21.6875vw;    
+        left: 21.6875vw;
     }
 
 }
@@ -114,27 +118,24 @@ body {
 .topbutton a {
     text-decoration: none;
     color: #FFF;
-    font-size: 1.6666666666666667vw;
+    font-size: 1.893491124260355vh;
     font-weight: 300;
 }
 
 
 @media only screen and (max-width: 600px) {
 
-    .up3{
-        padding: 0 4%;
+    .up3 {
+        padding: 0px 8.4%;
     }
 
-    .topbutton{
+    .topbutton {
         width: 100%;
         padding: 6% 1%;
         margin: 10% 0 40% 0;
     }
 
     .topbutton a {
-        font-size: 5vw;
+        font-size: 16px;
     }
 }
-
-
-
